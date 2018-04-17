@@ -67,55 +67,65 @@ var AppComponent = (function () {
 "use strict";
 /* unused harmony export AppMaterialModule */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__shared_order_by_pipe__ = __webpack_require__("./src/app/shared/order-by.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_file_size_pipe__ = __webpack_require__("./src/app/shared/file-size.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_report_service__ = __webpack_require__("./src/app/shared/report.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_order_pipe__ = __webpack_require__("./node_modules/ngx-order-pipe/ngx-order-pipe.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__routing_module__ = __webpack_require__("./src/app/routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_mydatepicker__ = __webpack_require__("./node_modules/mydatepicker/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__swimlane_ngx_charts__ = __webpack_require__("./node_modules/@swimlane/ngx-charts/release/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__swimlane_ngx_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__swimlane_ngx_charts__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ngx_progressbar__ = __webpack_require__("./node_modules/ngx-progressbar/modules/ngx-progressbar.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_platform_browser_animations__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/animations.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_ng2_file_upload_file_upload_file_upload_module__ = __webpack_require__("./node_modules/ng2-file-upload/file-upload/file-upload.module.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_ng2_file_upload_file_upload_file_upload_module___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_ng2_file_upload_file_upload_file_upload_module__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__app_component__ = __webpack_require__("./src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__login_login_component__ = __webpack_require__("./src/app/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__reports_reports_component__ = __webpack_require__("./src/app/reports/reports.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__file_upload_file_upload_component__ = __webpack_require__("./src/app/file-upload/file-upload.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__display_by_date_display_by_date_component__ = __webpack_require__("./src/app/display-by-date/display-by-date.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__display_by_organization_report_detail_component__ = __webpack_require__("./src/app/display-by-organization/report-detail.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_fusioncharts__ = __webpack_require__("./node_modules/fusioncharts/fusioncharts.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_fusioncharts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22_fusioncharts__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23_fusioncharts_fusioncharts_charts__ = __webpack_require__("./node_modules/fusioncharts/fusioncharts.charts.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23_fusioncharts_fusioncharts_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_23_fusioncharts_fusioncharts_charts__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24_angular4_fusioncharts__ = __webpack_require__("./node_modules/angular4-fusioncharts/dist/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25_fusioncharts_themes_fusioncharts_theme_fint__ = __webpack_require__("./node_modules/fusioncharts/themes/fusioncharts.theme.fint.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25_fusioncharts_themes_fusioncharts_theme_fint___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_25_fusioncharts_themes_fusioncharts_theme_fint__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__auth_auth_service__ = __webpack_require__("./src/app/auth/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__auth_auth_guard__ = __webpack_require__("./src/app/auth/auth.guard.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__header_header_component__ = __webpack_require__("./src/app/header/header.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__layouts_home_layout_component__ = __webpack_require__("./src/app/layouts/home-layout.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__layouts_login_layout_component__ = __webpack_require__("./src/app/layouts/login-layout.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31_ng2_opd_popup__ = __webpack_require__("./node_modules/ng2-opd-popup/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__shared_rxjs_operators__ = __webpack_require__("./src/app/shared/rxjs-operators.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__shared_rxjs_operators__ = __webpack_require__("./src/app/shared/rxjs-operators.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__auth_auth_guard__ = __webpack_require__("./src/app/auth/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__auth_auth_service__ = __webpack_require__("./src/app/auth/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_order_by_pipe__ = __webpack_require__("./src/app/shared/order-by.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_file_size_pipe__ = __webpack_require__("./src/app/shared/file-size.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_report_service__ = __webpack_require__("./src/app/shared/report.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__auth_auth_interceptor__ = __webpack_require__("./src/app/auth/auth.interceptor.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ng2_opd_popup__ = __webpack_require__("./node_modules/ng2-opd-popup/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ngx_order_pipe__ = __webpack_require__("./node_modules/ngx-order-pipe/ngx-order-pipe.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__routing_module__ = __webpack_require__("./src/app/routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_mydatepicker__ = __webpack_require__("./node_modules/mydatepicker/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_ngx_pagination__ = __webpack_require__("./node_modules/ngx-pagination/dist/ngx-pagination.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__swimlane_ngx_charts__ = __webpack_require__("./node_modules/@swimlane/ngx-charts/release/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__swimlane_ngx_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__swimlane_ngx_charts__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_ng2_search_filter__ = __webpack_require__("./node_modules/ng2-search-filter/ng2-search-filter.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_ngx_progressbar__ = __webpack_require__("./node_modules/ngx-progressbar/modules/ngx-progressbar.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__angular_platform_browser_animations__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/animations.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_ng2_file_upload_file_upload_file_upload_module__ = __webpack_require__("./node_modules/ng2-file-upload/file-upload/file-upload.module.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_ng2_file_upload_file_upload_file_upload_module___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_21_ng2_file_upload_file_upload_file_upload_module__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__app_component__ = __webpack_require__("./src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__home_home_component__ = __webpack_require__("./src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__login_login_component__ = __webpack_require__("./src/app/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__header_header_component__ = __webpack_require__("./src/app/header/header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__reports_reports_component__ = __webpack_require__("./src/app/reports/reports.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__layouts_home_layout_component__ = __webpack_require__("./src/app/layouts/home-layout.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__file_upload_file_upload_component__ = __webpack_require__("./src/app/file-upload/file-upload.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__display_by_date_display_by_date_component__ = __webpack_require__("./src/app/display-by-date/display-by-date.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__display_by_organization_report_detail_component__ = __webpack_require__("./src/app/display-by-organization/report-detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32_fusioncharts__ = __webpack_require__("./node_modules/fusioncharts/fusioncharts.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32_fusioncharts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_32_fusioncharts__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33_fusioncharts_fusioncharts_charts__ = __webpack_require__("./node_modules/fusioncharts/fusioncharts.charts.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33_fusioncharts_fusioncharts_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_33_fusioncharts_fusioncharts_charts__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34_angular4_fusioncharts__ = __webpack_require__("./node_modules/angular4-fusioncharts/dist/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35_fusioncharts_themes_fusioncharts_theme_fint__ = __webpack_require__("./node_modules/fusioncharts/themes/fusioncharts.theme.fint.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35_fusioncharts_themes_fusioncharts_theme_fint___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_35_fusioncharts_themes_fusioncharts_theme_fint__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-// import services and pipe
+
+// import services and pipes
+
+
+
 
 
 
 // import modules
+
+
+
 
 
 
@@ -136,31 +146,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
 // chart module and others
 
 
 
 
-
-
-
-
-
-
-
-__WEBPACK_IMPORTED_MODULE_24_angular4_fusioncharts__["a" /* FusionChartsModule */].fcRoot(__WEBPACK_IMPORTED_MODULE_22_fusioncharts__, __WEBPACK_IMPORTED_MODULE_23_fusioncharts_fusioncharts_charts__, __WEBPACK_IMPORTED_MODULE_25_fusioncharts_themes_fusioncharts_theme_fint__);
+__WEBPACK_IMPORTED_MODULE_34_angular4_fusioncharts__["a" /* FusionChartsModule */].fcRoot(__WEBPACK_IMPORTED_MODULE_32_fusioncharts__, __WEBPACK_IMPORTED_MODULE_33_fusioncharts_fusioncharts_charts__, __WEBPACK_IMPORTED_MODULE_35_fusioncharts_themes_fusioncharts_theme_fint__);
 var AppMaterialModule = (function () {
     function AppMaterialModule() {
     }
     AppMaterialModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["NgModule"])({
-            imports: [__WEBPACK_IMPORTED_MODULE_5__angular_common__["CommonModule"]],
+        Object(__WEBPACK_IMPORTED_MODULE_7__angular_core__["NgModule"])({
+            imports: [__WEBPACK_IMPORTED_MODULE_10__angular_common__["CommonModule"]],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_15__angular_material__["d" /* MatToolbarModule */],
-                __WEBPACK_IMPORTED_MODULE_15__angular_material__["b" /* MatCardModule */],
-                __WEBPACK_IMPORTED_MODULE_15__angular_material__["c" /* MatInputModule */],
-                __WEBPACK_IMPORTED_MODULE_15__angular_material__["a" /* MatButtonModule */]
-            ]
+                __WEBPACK_IMPORTED_MODULE_22__angular_material__["d" /* MatToolbarModule */],
+                __WEBPACK_IMPORTED_MODULE_22__angular_material__["b" /* MatCardModule */],
+                __WEBPACK_IMPORTED_MODULE_22__angular_material__["c" /* MatInputModule */],
+                __WEBPACK_IMPORTED_MODULE_22__angular_material__["a" /* MatButtonModule */]
+            ],
+            declarations: []
         })
     ], AppMaterialModule);
     return AppMaterialModule;
@@ -170,43 +177,54 @@ var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["NgModule"])({
+        Object(__WEBPACK_IMPORTED_MODULE_7__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_0__shared_order_by_pipe__["a" /* OrderByPipe */],
-                __WEBPACK_IMPORTED_MODULE_1__shared_file_size_pipe__["a" /* FileSizePipe */],
-                __WEBPACK_IMPORTED_MODULE_16__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__login_login_component__["a" /* LoginComponent */],
-                __WEBPACK_IMPORTED_MODULE_28__header_header_component__["a" /* HeaderComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__reports_reports_component__["a" /* ReportsComponent */],
-                __WEBPACK_IMPORTED_MODULE_29__layouts_home_layout_component__["a" /* HomeLayoutComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__file_upload_file_upload_component__["a" /* FileUploadComponent */],
-                __WEBPACK_IMPORTED_MODULE_30__layouts_login_layout_component__["a" /* LoginLayoutComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__display_by_organization_report_detail_component__["a" /* ReportDetailComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__display_by_date_display_by_date_component__["a" /* DisplayByDateComponent */],
+                __WEBPACK_IMPORTED_MODULE_3__shared_order_by_pipe__["a" /* OrderByPipe */],
+                __WEBPACK_IMPORTED_MODULE_4__shared_file_size_pipe__["a" /* FileSizePipe */],
+                __WEBPACK_IMPORTED_MODULE_23__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__home_home_component__["a" /* HomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__login_login_component__["a" /* LoginComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__header_header_component__["a" /* HeaderComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__reports_reports_component__["a" /* ReportsComponent */],
+                __WEBPACK_IMPORTED_MODULE_28__layouts_home_layout_component__["a" /* HomeLayoutComponent */],
+                __WEBPACK_IMPORTED_MODULE_29__file_upload_file_upload_component__["a" /* FileUploadComponent */],
+                __WEBPACK_IMPORTED_MODULE_31__display_by_organization_report_detail_component__["a" /* ReportDetailComponent */],
+                __WEBPACK_IMPORTED_MODULE_30__display_by_date_display_by_date_component__["a" /* DisplayByDateComponent */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_4_ngx_order_pipe__["a" /* OrderModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_forms__["d" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_9__angular_platform_browser__["BrowserModule"],
-                __WEBPACK_IMPORTED_MODULE_6__routing_module__["a" /* RoutingModule */],
-                __WEBPACK_IMPORTED_MODULE_8__swimlane_ngx_charts__["NgxChartsModule"],
-                __WEBPACK_IMPORTED_MODULE_11_ngx_progressbar__["b" /* NgProgressModule */],
-                __WEBPACK_IMPORTED_MODULE_12__angular_common_http__["c" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_14_ng2_file_upload_file_upload_file_upload_module__["FileUploadModule"],
+                __WEBPACK_IMPORTED_MODULE_9_ngx_order_pipe__["a" /* OrderModule */],
+                __WEBPACK_IMPORTED_MODULE_17__angular_forms__["d" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_16__angular_platform_browser__["BrowserModule"],
+                __WEBPACK_IMPORTED_MODULE_11__routing_module__["a" /* RoutingModule */],
+                __WEBPACK_IMPORTED_MODULE_14__swimlane_ngx_charts__["NgxChartsModule"],
+                __WEBPACK_IMPORTED_MODULE_18_ngx_progressbar__["b" /* NgProgressModule */],
+                __WEBPACK_IMPORTED_MODULE_19__angular_common_http__["c" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_21_ng2_file_upload_file_upload_file_upload_module__["FileUploadModule"],
                 AppMaterialModule,
-                __WEBPACK_IMPORTED_MODULE_7_mydatepicker__["MyDatePickerModule"],
-                __WEBPACK_IMPORTED_MODULE_24_angular4_fusioncharts__["a" /* FusionChartsModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_forms__["i" /* ReactiveFormsModule */],
-                __WEBPACK_IMPORTED_MODULE_13__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-                __WEBPACK_IMPORTED_MODULE_31_ng2_opd_popup__["b" /* PopupModule */].forRoot()
+                __WEBPACK_IMPORTED_MODULE_12_mydatepicker__["MyDatePickerModule"],
+                __WEBPACK_IMPORTED_MODULE_34_angular4_fusioncharts__["a" /* FusionChartsModule */],
+                __WEBPACK_IMPORTED_MODULE_13_ngx_pagination__["a" /* NgxPaginationModule */],
+                __WEBPACK_IMPORTED_MODULE_15_ng2_search_filter__["a" /* Ng2SearchPipeModule */],
+                __WEBPACK_IMPORTED_MODULE_17__angular_forms__["i" /* ReactiveFormsModule */],
+                __WEBPACK_IMPORTED_MODULE_20__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+                __WEBPACK_IMPORTED_MODULE_8_ng2_opd_popup__["b" /* PopupModule */].forRoot()
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_2__shared_report_service__["a" /* ReportService */],
-                __WEBPACK_IMPORTED_MODULE_26__auth_auth_service__["a" /* AuthService */],
-                __WEBPACK_IMPORTED_MODULE_27__auth_auth_guard__["a" /* AuthGuard */],
-                { provide: __WEBPACK_IMPORTED_MODULE_12__angular_common_http__["a" /* HTTP_INTERCEPTORS */], useClass: __WEBPACK_IMPORTED_MODULE_11_ngx_progressbar__["a" /* NgProgressInterceptor */], multi: true }
+                __WEBPACK_IMPORTED_MODULE_5__shared_report_service__["a" /* ReportService */],
+                __WEBPACK_IMPORTED_MODULE_2__auth_auth_service__["a" /* AuthService */],
+                __WEBPACK_IMPORTED_MODULE_1__auth_auth_guard__["a" /* AuthGuard */],
+                {
+                    provide: __WEBPACK_IMPORTED_MODULE_19__angular_common_http__["a" /* HTTP_INTERCEPTORS */],
+                    useClass: __WEBPACK_IMPORTED_MODULE_18_ngx_progressbar__["a" /* NgProgressInterceptor */],
+                    multi: true
+                },
+                {
+                    provide: __WEBPACK_IMPORTED_MODULE_19__angular_common_http__["a" /* HTTP_INTERCEPTORS */],
+                    useClass: __WEBPACK_IMPORTED_MODULE_6__auth_auth_interceptor__["a" /* TokenInterceptor */],
+                    multi: true
+                }
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_16__app_component__["a" /* AppComponent */]]
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_23__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -269,6 +287,47 @@ var AuthGuard = (function () {
 
 /***/ }),
 
+/***/ "./src/app/auth/auth.interceptor.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TokenInterceptor; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__auth_service__ = __webpack_require__("./src/app/auth/auth.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var TokenInterceptor = (function () {
+    function TokenInterceptor(auth) {
+        this.auth = auth;
+    }
+    TokenInterceptor.prototype.intercept = function (request, next) {
+        request = request.clone({
+            setHeaders: {
+                Authorization: "" + this.auth.getToken()
+            }
+        });
+        return next.handle(request);
+    };
+    TokenInterceptor = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__auth_service__["a" /* AuthService */]])
+    ], TokenInterceptor);
+    return TokenInterceptor;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/auth/auth.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -277,6 +336,8 @@ var AuthGuard = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__ = __webpack_require__("./node_modules/rxjs/_esm5/BehaviorSubject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("./src/environments/environment.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -289,36 +350,82 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var AuthService = (function () {
-    function AuthService(router) {
+    function AuthService(router, http) {
         this.router = router;
-        this.loggedIn = new __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__["a" /* BehaviorSubject */](false); // {1}
+        this.http = http;
+        this.storeKey = 'currentUser';
+        this.loggedIn = new __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__["a" /* BehaviorSubject */](false);
+        this.loginPostLoadingComplete = false;
+        // set login api url post
+        var endpoint = __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl;
+        this.loginEndpoint = endpoint + '/login';
     }
     Object.defineProperty(AuthService.prototype, "isLoggedIn", {
-        get: function () {
-            return this.loggedIn.asObservable(); // {2}
-        },
+        get: function () { return this.loggedIn.asObservable(); },
         enumerable: true,
         configurable: true
     });
-    AuthService.prototype.login = function (user) {
-        if (user.userName === 'admin' && user.password === 'pass') {
-            this.loggedIn.next(true);
-            this.router.navigate(['/report']);
-            console.log('login successfully ' + this.loggedIn);
-        }
-        else {
-            this.loggedIn.next(false);
-            console.log('worng password or username ' + this.loggedIn);
-        }
+    AuthService.prototype.isLoginPostLoadign = function () { return this.loginPostLoadingComplete; };
+    AuthService.prototype.loginAuthBackend = function (user) {
+        console.log('in login post credetntials to backend');
+        var formData = new FormData();
+        formData.append('username', user.userName);
+        formData.append('password', user.password);
+        return this.http.post(this.loginEndpoint, formData);
+    };
+    AuthService.prototype.getLoginPostData = function (user) {
+        var _this = this;
+        this.loginAuthBackend(user)
+            .finally(function () { return _this.loginPostLoadingComplete = true; })
+            .subscribe(function (data) {
+            var token = data.token;
+            console.log('data retrun after post is: ' + token);
+            // login successful if there's a jwt token in the response
+            if (token) {
+                _this.loginToken = data.token;
+                console.log('value of logintoken is: ' + _this.loginToken);
+                // set loogedIn to true to indicate successful login
+                _this.loggedIn.next(true);
+                // store token in local storage to keep user logged in between page refreshes
+                localStorage.setItem(_this.storeKey, JSON.stringify({
+                    token: _this.loginToken
+                }));
+                // go to reports list
+                _this.router.navigate(['/home']);
+            }
+            else {
+                // set logintoken to null
+                _this.loginToken = null;
+                // set loggedIn to false to indicate failed login
+                _this.loggedIn.next(false);
+            }
+        }, function (error) {
+            console.log('in lodin post error' + error);
+        });
+    };
+    AuthService.prototype.getToken = function () {
+        return this.loginToken;
+    };
+    AuthService.prototype.isLoggedIn$$ = function () {
+        return this.loginToken !== null;
+    };
+    AuthService.prototype.isAuthenticated = function () {
+        var token = localStorage.getItem(this.loginToken);
     };
     AuthService.prototype.logout = function () {
+        this.loginToken = null;
         this.loggedIn.next(false);
+        localStorage.removeItem(this.storeKey);
         this.router.navigate(['/login']);
+        console.log('in logout, logintoken value is : ' + this.loginToken);
     };
     AuthService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* Router */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["b" /* HttpClient */]])
     ], AuthService);
     return AuthService;
 }());
@@ -330,14 +437,14 @@ var AuthService = (function () {
 /***/ "./src/app/display-by-date/display-by-date.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "/********************************************************************************************/\n.container {\n    margin: 0 auto;\n    width: -webkit-fit-content;\n    width: -moz-fit-content;\n    width: fit-content;\n}\n*{ text-align: center; }\n/********************************************************************************************/\n/* css to display two blocks on the page                                                    */\n/********************************************************************************************/\n#left {\n  float: left;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n  padding-right: 50px;\n}\n#first {\n    width: auto;\n    float: left;\n    height: auto;\n    text-align: center;\n    padding-right: 50px;\n}\n#second {\n    width: auto;\n    float: left;\n    height: auto;\n    padding-top: 10px;\n}\n/********************************************************************************************/\n/* button CSS style                                                                         */\n/********************************************************************************************/\nbutton {\n    border: none;\n    color: white;\n    font-size: 16px;\n    margin: 4px 2px;\n    cursor: pointer;\n    padding: 15px 32px;\n    text-align: center;\n    border-radius: 12px;\n    text-decoration: none;\n    display: inline-block;\n    transition-duration: 0.4s;\n    -webkit-transition-duration: 0.4s; \n}\n.btnBack { background-color: #2952a3; }\n.btnDelete { background-color: #b30000; }\nbutton:hover {\n    background-color: #660000;\n    -webkit-box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);\n            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);\n}\n/********************************************************************************************/\n/* Table CSS                                                                                */\n/********************************************************************************************/\n#repotable th {\n    color: white;\n    text-align: center;\n    padding-top: 12px;\n    padding-bottom: 12px;\n    background-color: #2952a3;\n}\n#repotable td, #repotable th {\n    padding: 8px;\n    border: 1px solid #ddd;\n}\n#repotable tr:hover { background-color: #ddd; }\n#repotable tr:nth-child(even) { background-color: #f2f2f2; }\n#repotable { \n    width: -webkit-fit-content; \n    width: -moz-fit-content; \n    width: fit-content;\n    margin-bottom: 15px;\n    border-collapse: collapse;\n    font-family: \"Trebuchet MS\", Arial, Helvetica, sans-serif;\n}\n/********************************************************************************************/\n"
+module.exports = "/********************************************************************************************/\n.container {\n    margin: 0 auto;\n    width: -webkit-fit-content;\n    width: -moz-fit-content;\n    width: fit-content;\n}\n*{ text-align: center; }\n/********************************************************************************************/\n/* css to display two blocks on the page                                                    */\n/********************************************************************************************/\n#left {\n  float: left;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n#first {\n    width: auto;\n    float: left;\n    height: auto;\n    text-align: center;\n    margin: 30px auto;\n}\n#second {\n    width: auto;\n    float: left;\n    height: auto;\n    padding-top: 10px;\n}\n/********************************************************************************************/\n/* button CSS style                                                                         */\n/********************************************************************************************/\nbutton {\n    border: none;\n    color: white;\n    font-size: 16px;\n    margin: 4px 2px;\n    cursor: pointer;\n    padding: 15px 32px;\n    text-align: center;\n    border-radius: 12px;\n    text-decoration: none;\n    display: inline-block;\n    transition-duration: 0.4s;\n    -webkit-transition-duration: 0.4s; \n}\n.btnBack { background-color: #2952a3; }\n.btnDelete { background-color: #b30000; }\nbutton:hover {\n    background-color: #660000;\n    -webkit-box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);\n            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);\n}\n/********************************************************************************************/\n/* Table CSS                                                                                */\n/********************************************************************************************/\n#repotable th {\n    color: white;\n    text-align: center;\n    padding-top: 12px;\n    padding-bottom: 12px;\n    background-color: #2952a3;\n}\n#repotable td, #repotable th {\n    padding: 8px;\n    border: 1px solid #ddd;\n}\n#repotable tr:hover { background-color: #ddd; }\n#repotable tr:nth-child(even) { background-color: #f2f2f2; }\n#repotable { \n    width: -webkit-fit-content; \n    width: -moz-fit-content; \n    width: fit-content;\n    margin-bottom: 15px;\n    border-collapse: collapse;\n    font-family: \"Trebuchet MS\", Arial, Helvetica, sans-serif;\n}\n/********************************************************************************************/\n"
 
 /***/ }),
 
 /***/ "./src/app/display-by-date/display-by-date.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<body>\n\n  <popup #popupViewByDate (confirmClick)=\"ConfirmDeleteEvent()\" (cancelClick)=\"CancelDeleteEvent()\">\n    <b>Are you sure you want to delete {{ date | date : \"MMMM d, y\" }} report permanently?</b>\n  </popup>\n\n  <div class=\"container\">\n\n    <h2> {{ date | date : \"MMMM d, y\" }} Report</h2><br>\n  \n    <div id=\"left\">\n  \n      <div ng-if=\"selecteddate\" ng-controller=\"datCtrl\">\n  \n        <div id=\"first\">\n  \n          <fusioncharts \n            [id]=\"id\" \n            [type]=\"type\"\n            [width]=\"width\" \n            [height]=\"height\"  \n            [dataFormat]=\"dataFormat\" \n            [dataSource]=\"dataSource\"\n          ></fusioncharts><br><br>\n  \n          <div>\n            <button type=\"button\" class=\"btnBack\" (click)=\"goBack()\">Back</button>\n            <button type=\"button\" class=\"btnDelete\" (click)=\"deleteReport()\">\n              Delete {{ date | date : \"MMMM d, y\" }} Report\n            </button>\n          </div>\n  \n        </div>\n  \n        <div id=\"second\">\n  \n          <table id=\"repotable\" align=\"center\">\n  \n            <thead>\n              <tr>\n                <th [class.active]=\"order === 'organization'\" (click)=\"setOrder('organization')\">\n                  Organization\n                  <span [hidden]=\"reverse\">▼</span>\n                  <span [hidden]=\"!reverse\">▲</span>\n                </th>\n                \n                <th [class.active]=\"order === 'size'\" (click)=\"setOrder('size')\">\n                  Size\n                  <span [hidden]=\"reverse\">▼</span>\n                  <span [hidden]=\"!reverse\">▲</span>\n                </th>\n              </tr>\n            </thead>\n  \n            <tr *ngFor=\"let report of reportByDate | orderBy : order : reverse\">\n              <td>{{ report.organization }}</td>\n              <td>{{ report.size | fileSize }}</td>\n            </tr>\n          </table>\n  \n        </div>\n  \n      </div>\n  \n    </div>\n  \n  </div>\n\n</body>\n\n"
+module.exports = "<body>\n\n  <popup #popupViewByDate (confirmClick)=\"ConfirmDeleteEvent()\" (cancelClick)=\"CancelDeleteEvent()\">\n    <b>Are you sure you want to delete {{ date | date : \"MMMM d, y\" }} report permanently?</b>\n  </popup>\n\n  <div class=\"container\">\n\n    <h2> {{ date | date : \"MMMM d, y\" }} Report</h2><br>\n  \n    <div id=\"left\">\n  \n      <div ng-if=\"selecteddate\" ng-controller=\"datCtrl\">\n  \n        <div id=\"first\">\n  \n          <fusioncharts \n            [id]=\"id\" \n            [type]=\"type\"\n            [width]=\"width\" \n            [height]=\"height\"  \n            [dataFormat]=\"dataFormat\" \n            [dataSource]=\"dataSource\"\n          ></fusioncharts><br><br>\n  \n          <div>\n            <button type=\"button\" class=\"btnBack\" (click)=\"goBack()\">Back</button>\n            <button type=\"button\" class=\"btnDelete\" (click)=\"deleteReport()\">\n              Delete {{ date | date : \"MMMM d, y\" }} Report\n            </button>\n          </div>\n  \n        </div>\n        \n        <!-- \n        <div id=\"second\">\n  \n          <table id=\"repotable\" align=\"center\">\n  \n            <thead>\n              <tr>\n                <th [class.active]=\"order === 'organization'\" (click)=\"setOrder('organization')\">\n                  Organization\n                  <span [hidden]=\"reverse\">▼</span>\n                  <span [hidden]=\"!reverse\">▲</span>\n                </th>\n                \n                <th [class.active]=\"order === 'size'\" (click)=\"setOrder('size')\">\n                  Size\n                  <span [hidden]=\"reverse\">▼</span>\n                  <span [hidden]=\"!reverse\">▲</span>\n                </th>\n              </tr>\n            </thead>\n  \n            <tr *ngFor=\"let report of reportByDate | orderBy : order : reverse\">\n              <td>{{ report.organization }}</td>\n              <td>{{ report.size | fileSize }}</td>\n            </tr>\n          </table>\n  \n        </div>\n        -->\n  \n      </div>\n  \n    </div>\n  \n  </div>\n\n</body>\n\n"
 
 /***/ }),
 
@@ -377,11 +484,11 @@ var DisplayByDateComponent = (function () {
         this.orderByPipe = orderByPipe;
         this.reposervice = reposervice;
         this.reportByDateChart = [];
-        this.width = 900;
-        this.height = 400;
+        this.width = 1200;
+        this.height = 550;
         this.id = 'chart1';
-        this.type = 'column2d';
         this.dataFormat = 'json';
+        this.type = 'scrollColumn2d';
         this.date = this.route.snapshot.params['id'];
     }
     DisplayByDateComponent.prototype.ngOnInit = function () {
@@ -403,12 +510,18 @@ var DisplayByDateComponent = (function () {
             _this.dataSource = {
                 'chart': {
                     // Background color and alpha
-                    'bgColor': '#ebf6f9',
                     'bgAlpha': '50',
                     'theme': 'fint',
+                    'bgColor': '#ebf6f9',
                     'canvasPadding': '15',
+                    'showcanvasborder': '0',
+                    'showAlternateHGridColor': '1',
                     // data value config
-                    'showValues': '0',
+                    'showValues': '1',
+                    'rotateValues': '0',
+                    'valueFontBold': '1',
+                    'valueFont': 'Iceland',
+                    'placeValuesInside': '1',
                     // data labels config
                     'slantLabel': '1',
                     'labelFont': 'Arial',
@@ -417,17 +530,17 @@ var DisplayByDateComponent = (function () {
                     'labelFontAlpha': '70',
                     'labelDisplay': 'rotate',
                     // y Axis name config
-                    'yAxisNameFont': 'Arial',
+                    'yAxisNameFont': 'Times',
                     'yAxisNameFontBold': '1',
-                    'yAxisNameFontSize': '15',
+                    'yAxisNameFontSize': '20',
                     'yAxisNameFontItalic': '1',
                     'yAxisNameFontColor': '#993300',
                     'yAxisName': 'Size (memory used)',
                     // x Axis config
-                    'xAxisName': 'Date',
-                    'xAxisNameFont': 'Arial',
+                    'xAxisName': 'Organizations',
+                    'xAxisNameFont': 'Times',
                     'xAxisNameFontBold': '1',
-                    'xAxisNameFontSize': '15',
+                    'xAxisNameFontSize': '20',
                     'xAxisNameFontItalic': '1',
                     'xAxisNameFontColor': '#993300',
                     // add gradient effect to data plots
@@ -435,16 +548,56 @@ var DisplayByDateComponent = (function () {
                     'plotGradientColor': '#ffffff',
                     // number format
                     'numberScaleUnit': ' KB, MB, GB',
-                    'numberScaleValue': '1024,1024,1024'
+                    'numberScaleValue': '1024,1024,1024',
+                    // number of visible plots
+                    // show report of 20 organization at once
+                    'numVisiblePlot': '20',
+                    // customized scroll bar
+                    'scrollheight': '20',
+                    'flatScrollBars': '1',
+                    'scrollPadding': '20',
+                    'scrollShowButtons': '1',
+                    'scrollColor': '#336699',
+                    // subcaption and caption style
+                    'captionFontSize': '16',
+                    'subcaptionFontBold': '0',
+                    'subcaptionFontSize': '14',
+                    'subcaption': '2017 - 2019',
+                    'caption': 'Data Storage Trends Per Organization',
+                    // cosmestics
+                    'showborder': '0',
+                    'showShadow': '1',
+                    'baseFont': 'Times',
+                    'baseFontSize': '12',
+                    'linethickness': '3',
+                    'divLineGapLen': '1',
+                    'showplotborder': '0',
+                    'divlineAlpha': '100',
+                    'divLineDashLen': '1',
+                    'divLineIsDashed': '1',
+                    'showHoverEffect': '1',
+                    'divlineThickness': '1',
+                    'divlineColor': '#999999',
                 },
-                'data': _this.reportByDateChart.map(function (item) {
-                    return {
-                        'label': item.organization,
-                        'value': item.size,
-                        // generate new color for each data display
-                        'color': '#336699' + Math.floor(Math.random() * 16777215).toString(16)
-                    };
-                })
+                'categories': [
+                    {
+                        'category': _this.reportByDateChart.map(function (item) {
+                            return {
+                                'label': item.organization
+                            };
+                        })
+                    }
+                ],
+                'dataset': [
+                    {
+                        'data': _this.reportByDateChart.map(function (item) {
+                            return {
+                                'value': item.size,
+                                'color': Math.floor(Math.random() * 16777215).toString(16)
+                            };
+                        })
+                    }
+                ]
             };
             console.log(_this.dataSource);
         });
@@ -481,7 +634,7 @@ var DisplayByDateComponent = (function () {
         this.reposervice
             .deleteReportByDate(this.date)
             .subscribe(function (report) { return (_this.reportByDate = report); });
-        this.router.navigate(['/report']);
+        this.router.navigate(['/home']);
     };
     DisplayByDateComponent.prototype.CancelDeleteEvent = function () {
         this.popupByDate.hide();
@@ -514,14 +667,14 @@ var DisplayByDateComponent = (function () {
 /***/ "./src/app/display-by-organization/report-detail.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "/********************************************************************************************/\n.container {\n    margin: auto;\n    width: -webkit-fit-content;\n    width: -moz-fit-content;\n    width: fit-content;\n}\n*{ text-align: center; }\n/********************************************************************************************/\n/* css to display two blocks on the page                                                    */\n/********************************************************************************************/\n#left {\n  float: left;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n  padding-right: 50px;\n}\n#first {\n    width: auto;\n    float: left;\n    height: auto;\n    text-align: center;\n    padding-right: 50px;\n}\n#second {\n    width: auto;\n    float: left;\n    height: auto;\n    padding-top: 10px;\n}\n/********************************************************************************************/\n/* button CSS style                                                                         */\n/********************************************************************************************/\nbutton {\n    border: none;\n    color: white;\n    font-size: 16px;\n    margin: 4px 2px;\n    cursor: pointer;\n    padding: 15px 32px;\n    text-align: center;\n    border-radius: 12px;\n    text-decoration: none;\n    display: inline-block;\n    transition-duration: 0.4s;\n    -webkit-transition-duration: 0.4s; /* Safari */\n}\n.btnBack { background-color: #2952a3; }\n.btnDelete { background-color: #b30000; }\nbutton:hover {\n    background-color: #660000;\n    -webkit-box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);\n            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);\n}\n/********************************************************************************************/\n/* Table CSS                                                                                */\n/********************************************************************************************/\n#repotable th {\n    color: white;\n    text-align: center;\n    padding-top: 12px;\n    padding-bottom: 12px;\n    background-color: #2952a3;\n}\n#repotable td, #repotable th {\n    padding: 8px;\n    border: 1px solid #ddd;\n}\n#repotable tr:hover { background-color: #ddd; }\n#repotable tr:nth-child(even) { background-color: #f2f2f2; }\n#repotable { \n    width: -webkit-fit-content; \n    width: -moz-fit-content; \n    width: fit-content;\n    margin-bottom: 15px;\n    border-collapse: collapse;\n    font-family: \"Trebuchet MS\", Arial, Helvetica, sans-serif;\n}\n/********************************************************************************************/\n"
+module.exports = "/********************************************************************************************/\n.container {\n    margin: auto;\n    width: -webkit-fit-content;\n    width: -moz-fit-content;\n    width: fit-content;\n}\n*{ text-align: center; }\n/********************************************************************************************/\n/* css to display two blocks on the page                                                    */\n/********************************************************************************************/\n#left {\n  float: left;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n#first {\n    width: auto;\n    float: left;\n    height: auto;\n    text-align: center;\n    margin: 30px auto;\n}\n#second {\n    width: auto;\n    float: left;\n    height: auto;\n    padding-top: 10px;\n}\n/********************************************************************************************/\n/* button CSS style                                                                         */\n/********************************************************************************************/\nbutton {\n    border: none;\n    color: white;\n    font-size: 16px;\n    margin: 4px 2px;\n    cursor: pointer;\n    padding: 15px 32px;\n    text-align: center;\n    border-radius: 12px;\n    text-decoration: none;\n    display: inline-block;\n    transition-duration: 0.4s;\n    -webkit-transition-duration: 0.4s; /* Safari */\n}\n.btnBack { background-color: #2952a3; }\n.btnDelete { background-color: #b30000; }\nbutton:hover {\n    background-color: #660000;\n    -webkit-box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);\n            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);\n}\n/********************************************************************************************/\n/* Table CSS                                                                                */\n/********************************************************************************************/\n#repotable th {\n    color: white;\n    text-align: center;\n    padding-top: 12px;\n    padding-bottom: 12px;\n    background-color: #2952a3;\n}\n#repotable td, #repotable th {\n    padding: 8px;\n    border: 1px solid #ddd;\n}\n#repotable tr:hover { background-color: #ddd; }\n#repotable tr:nth-child(even) { background-color: #f2f2f2; }\n#repotable { \n    width: -webkit-fit-content; \n    width: -moz-fit-content; \n    width: fit-content;\n    margin-bottom: 15px;\n    border-collapse: collapse;\n    font-family: \"Trebuchet MS\", Arial, Helvetica, sans-serif;\n}\n/********************************************************************************************/\n"
 
 /***/ }),
 
 /***/ "./src/app/display-by-organization/report-detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<body>\n\n  <popup #popupViewByOrg (confirmClick)=\"ConfirmDeleteEvent()\" (cancelClick)=\"CancelDeleteEvent()\">\n    <b>Are you sure you want to delete {{ orgName }} report permanently?</b>\n  </popup>\n\n  <div class=\"container\">\n\n    <h2> {{ orgName | uppercase }} Report</h2><br>\n\n    <div id=\"left\">\n\n      <div ng-if=\"selecteddate\" ng-controller=\"datCtrl\">\n\n        <div id=\"first\">\n\n          <fusioncharts \n            [id]=\"id\" \n            [width]=\"width\" \n            [height]=\"height\" \n            [type]=\"type\" \n            [dataFormat]=\"dataFormat\" \n            [dataSource]=\"dataSource\">\n          </fusioncharts><br><br>\n\n          <div>\n            <button type=\"button\" class=\"btnBack\" (click)=\"goBack()\">Back</button>\n            <button type=\"button\" class=\"btnDelete\" (click)=\"deleteReport()\">\n               Delete {{ orgName }} Report\n            </button>\n          </div>\n\n        </div>\n\n        <div id=\"second\">\n\n          <table id=\"repotable\" align=\"center\">\n\n            <thead>\n              <tr>\n                <th [class.active]=\"order === 'size'\" (click)=\"setOrder('size')\" class=\"mdl-data-table__cell--non-numeric\">\n                  Size\n                  <span [hidden]=\"reverse\">▼</span>\n                  <span [hidden]=\"!reverse\">▲</span>\n                </th>\n                \n                <th [class.active]=\"order === 'date'\" (click)=\"setOrder('date')\">\n                  Date\n                  <span [hidden]=\"reverse\">▼</span>\n                  <span [hidden]=\"!reverse\">▲</span>\n                </th>\n              </tr>\n            </thead>\n\n            <tr *ngFor=\"let report of reportByNames | orderBy : order : reverse\">\n              <td>{{ report.size | fileSize }}</td>\n              <td>{{ report.date | date : \"MMMM d, y\" }}</td>\n            </tr>\n          </table>\n\n        </div>\n\n      </div>\n\n    </div>\n\n  </div>\n\n</body>\n\n\n\n"
+module.exports = "<body>\n\n  <popup #popupViewByOrg (confirmClick)=\"ConfirmDeleteEvent()\" (cancelClick)=\"CancelDeleteEvent()\">\n    <b>Are you sure you want to delete {{ orgName }} report permanently?</b>\n  </popup>\n\n  <div class=\"container\">\n\n    <h2> {{ orgName | uppercase }} Report</h2><br>\n\n    <div id=\"left\">\n\n      <div ng-if=\"selecteddate\" ng-controller=\"datCtrl\">\n\n        <div id=\"first\">\n\n          <fusioncharts \n            [id]=\"id\" \n            [width]=\"width\" \n            [height]=\"height\" \n            [type]=\"type\" \n            [dataFormat]=\"dataFormat\" \n            [dataSource]=\"dataSource\">\n          </fusioncharts><br><br>\n\n          <div>\n            <button type=\"button\" class=\"btnBack\" (click)=\"goBack()\">Back</button>\n            <button type=\"button\" class=\"btnDelete\" (click)=\"deleteReport()\">\n               Delete {{ orgName }} Report\n            </button>\n          </div>\n\n        </div>\n\n        <!-- \n        <div id=\"second\">\n\n          <table id=\"repotable\" align=\"center\">\n\n            <thead>\n              <tr>\n                <th [class.active]=\"order === 'size'\" (click)=\"setOrder('size')\" class=\"mdl-data-table__cell--non-numeric\">\n                  Size\n                  <span [hidden]=\"reverse\">▼</span>\n                  <span [hidden]=\"!reverse\">▲</span>\n                </th>\n                \n                <th [class.active]=\"order === 'date'\" (click)=\"setOrder('date')\">\n                  Date\n                  <span [hidden]=\"reverse\">▼</span>\n                  <span [hidden]=\"!reverse\">▲</span>\n                </th>\n              </tr>\n            </thead>\n\n            <tr *ngFor=\"let report of reportByNames | orderBy : order : reverse\">\n              <td>{{ report.size | fileSize }}</td>\n              <td>{{ report.date | date : \"MMMM d, y\" }}</td>\n            </tr>\n          </table>\n\n        </div>\n        -->\n\n      </div>\n\n    </div>\n\n  </div>\n\n</body>\n\n\n\n"
 
 /***/ }),
 
@@ -562,11 +715,11 @@ var ReportDetailComponent = (function () {
         this.route = route;
         this.reportService = reportService;
         this.ReportByNamesChart = [];
-        this.width = 700;
-        this.height = 400;
+        this.height = 550;
+        this.width = 1200;
         this.id = 'chart1';
-        this.type = 'column2d';
         this.dataFormat = 'json';
+        this.type = 'scrollarea2d';
         this.orgName = route.snapshot.params['id'];
     }
     ReportDetailComponent.prototype.ngOnInit = function () {
@@ -582,55 +735,96 @@ var ReportDetailComponent = (function () {
             .getReportByNameChart(this.orgName)
             .subscribe(function (report) {
             _this.ReportByNamesChart = report;
-            console.log('In report by Names chart data' + _this.ReportByNamesChart);
+            _this.paletteColors = Math.floor(Math.random() * 16777215).toString(16);
+            _this.plotGradientColor = Math.floor(Math.random() * 16777215).toString(16);
             _this.dataSource = {
                 'chart': {
                     // Background color and alpha
-                    'bgColor': '#ebf6f9',
                     'bgAlpha': '50',
                     'theme': 'fint',
-                    'canvasPadding': '15',
+                    'bgColor': '#ebf6f9',
+                    'canvasPadding': '16',
+                    'showcanvasborder': '0',
+                    'showAlternateHGridColor': '1',
                     // data value config
-                    'rotateValues': '0',
-                    'valueFontBold': '1',
-                    'placeValuesInside': '0',
-                    'valueFontColor': '#000099',
+                    'showValues': '0',
                     // data labels config
                     'slantLabel': '1',
                     'labelFont': 'Arial',
                     'labelFontBold': '1',
                     'lableFontItalic': '1',
                     'labelFontAlpha': '70',
-                    'labelDisplay': 'rotate',
+                    'labelDisplay': 'AUTO',
                     // y Axis name config
-                    'yAxisNameFont': 'Arial',
+                    'yAxisNameFont': 'Times',
                     'yAxisNameFontBold': '1',
-                    'yAxisNameFontSize': '15',
+                    'yAxisNameFontSize': '20',
                     'yAxisNameFontItalic': '1',
                     'yAxisNameFontColor': '#993300',
                     'yAxisName': 'Size (memory used)',
                     // x Axis config
-                    'xAxisName': 'Date',
-                    'xAxisNameFont': 'Arial',
+                    'xAxisName': 'Dates',
+                    'showAxisLines': '0',
+                    'xAxisNameFont': 'Times',
                     'xAxisNameFontBold': '1',
-                    'xAxisNameFontSize': '15',
+                    'xAxisNameFontSize': '20',
                     'xAxisNameFontItalic': '1',
                     'xAxisNameFontColor': '#993300',
-                    // add gradient effect to data plots
-                    'usePlotGradientColor': '1',
-                    'plotGradientColor': '#ffffff',
                     // number format
                     'numberScaleUnit': ' KB, MB, GB',
-                    'numberScaleValue': '1024,1024,1024'
+                    'numberScaleValue': '1024,1024,1024',
+                    // number of visible plots
+                    // for a yearly report : 365 days
+                    'numVisiblePlot': '280',
+                    // customized scroll bar
+                    'scrollheight': '20',
+                    'flatScrollBars': '1',
+                    'scrollPadding': '20',
+                    'scrollShowButtons': '1',
+                    'scrollColor': '#336699',
+                    // subcaption and caption style
+                    'captionFontSize': '16',
+                    'subcaptionFontBold': '0',
+                    'subcaptionFontSize': '14',
+                    'subcaption': '2017 - 2019',
+                    'caption': 'Data Storage Trends Over Time',
+                    // cosmetics
+                    'showBorder': '0',
+                    'showShadow': '0',
+                    'baseFont': 'Times',
+                    'baseFontSize': '12',
+                    'divLineGapLen': '1',
+                    'lineThickness': '3',
+                    'divlineAlpha': '100',
+                    'divLineDashLen': '1',
+                    'showplotborder': '1',
+                    'divLineIsDashed': '1',
+                    'showHoverEffect': '1',
+                    'divlineThickness': '1',
+                    'showCanvasBorder': '0',
+                    'plotBorderAlpha': '80',
+                    'usePlotGradientColor': '1',
+                    'paletteColors': _this.paletteColors,
+                    'plotGradientColor': _this.plotGradientColor,
                 },
-                'data': _this.ReportByNamesChart.map(function (item) {
-                    return {
-                        'label': _this.datePipe.transform(item.date, 'MMMM d, y'),
-                        'value': item.size,
-                        // generate new color for each data display
-                        'color': '#336699' + Math.floor(Math.random() * 16777215).toString(16)
-                    };
-                })
+                'categories': [
+                    {
+                        'category': _this.ReportByNamesChart.map(function (item) {
+                            return {
+                                'label': _this.datePipe.transform(item.date, 'MMMM d, y')
+                            };
+                        })
+                    }
+                ],
+                'dataset': [
+                    {
+                        'data': _this.ReportByNamesChart.map(function (item) {
+                            return {
+                                'value': item.size,
+                            };
+                        })
+                    }
+                ]
             };
             console.log(_this.dataSource);
         });
@@ -724,8 +918,9 @@ module.exports = "<body>\n\n  <popup #popup1 (confirmClick)=\"CloseEvent()\" (ca
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_report_service__ = __webpack_require__("./src/app/shared/report.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__environments_environment__ = __webpack_require__("./src/environments/environment.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -743,8 +938,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-// define the constant url we would be uploading to
-var apiUrl = 'https://web-server-reports.herokuapp.com/file';
+
 var FileUploadComponent = (function () {
     function FileUploadComponent(router, el, FB, http, repoService) {
         this.router = router;
@@ -755,17 +949,24 @@ var FileUploadComponent = (function () {
         this.myDatePickerOptions = {
             inline: false,
             height: '40px',
-            width: '210px',
-            dateFormat: 'yyyy-mm-dd'
+            width: '250px',
+            dateFormat: 'd mmm yyyy'
         };
         this.model = { date: { year: 2018, month: 1, day: 1 } };
+        // set uploading endpoint
+        var endpoint = __WEBPACK_IMPORTED_MODULE_6__environments_environment__["a" /* environment */].apiUrl;
+        this.uploadEndpoint = endpoint + '/file';
     }
-    FileUploadComponent.prototype.ngOnInit = function () { this.getReportByDate(this.reportDate); };
+    FileUploadComponent.prototype.ngOnInit = function () {
+        this.getReportByDate(this.reportDate);
+    };
     FileUploadComponent.prototype.getReportByDate = function (date) {
         var _this = this;
         console.log('get report after upload');
         this.repoService.getReportByDate(date)
-            .subscribe(function (report) { return _this.reportBydate = report; });
+            .subscribe(function (report) {
+            _this.reportBydate = report;
+        });
     };
     FileUploadComponent.prototype.upload = function () {
         var _this = this;
@@ -796,11 +997,8 @@ var FileUploadComponent = (function () {
                 };
                 formData.append('file', inputEl.files.item(0));
                 formData.append('date', this.model.jsdate.toISOString());
-                this.http
-                    .post(apiUrl, formData)
-                    .subscribe(function (success) {
-                    _this.popup2.show(_this.popup2.options);
-                }, function (error) { alert(error); });
+                this.http.post(this.uploadEndpoint, formData)
+                    .subscribe(function (success) { _this.popup2.show(_this.popup2.options); }, function (error) { alert(error); });
             }
         }
         else {
@@ -823,30 +1021,30 @@ var FileUploadComponent = (function () {
         this.router.navigate(['/detail-date', this.reportDate]);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_6__angular_core__["ViewChild"])('popup1'),
+        Object(__WEBPACK_IMPORTED_MODULE_7__angular_core__["ViewChild"])('popup1'),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2_ng2_opd_popup__["a" /* Popup */])
     ], FileUploadComponent.prototype, "popup1", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_6__angular_core__["ViewChild"])('popup2'),
+        Object(__WEBPACK_IMPORTED_MODULE_7__angular_core__["ViewChild"])('popup2'),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2_ng2_opd_popup__["a" /* Popup */])
     ], FileUploadComponent.prototype, "popup2", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_6__angular_core__["ViewChild"])('myFileInput'),
+        Object(__WEBPACK_IMPORTED_MODULE_7__angular_core__["ViewChild"])('myFileInput'),
         __metadata("design:type", Object)
     ], FileUploadComponent.prototype, "myFile", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_6__angular_core__["ViewChild"])('fileInput'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_6__angular_core__["ElementRef"])
+        Object(__WEBPACK_IMPORTED_MODULE_7__angular_core__["ViewChild"])('fileInput'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_7__angular_core__["ElementRef"])
     ], FileUploadComponent.prototype, "fileInput", void 0);
     FileUploadComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_6__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_7__angular_core__["Component"])({
             selector: 'app-file-upload',
             template: __webpack_require__("./src/app/file-upload/file-upload.component.html"),
             styles: [__webpack_require__("./src/app/file-upload/file-upload.component.css")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_core__["ElementRef"],
-            __WEBPACK_IMPORTED_MODULE_7__angular_forms__["b" /* FormBuilder */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_core__["ElementRef"],
+            __WEBPACK_IMPORTED_MODULE_8__angular_forms__["b" /* FormBuilder */],
             __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["b" /* HttpClient */],
             __WEBPACK_IMPORTED_MODULE_5__shared_report_service__["a" /* ReportService */]])
     ], FileUploadComponent);
@@ -867,7 +1065,7 @@ module.exports = "/*************************************************************
 /***/ "./src/app/header/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<body>\n\n  <div *ngIf=\"isLoggedIn$ | async as isLoggedIn\">\n  \n    <mat-toolbar color=\"primary\">\n      <span>\n        <h1>{{ title }}</h1>\n      </span>\n      <span class=\"fill-remaining-space\"></span>\n      <button mat-button routerLink=\"/upload-file\">\n        <b>Upload Report</b>\n      </button>\n      <button mat-button routerLink=\"/report\">\n        <b>View Report</b>\n      </button>\n      <button mat-button color=\"accent\" (click)=\"onLogout()\" *ngIf=\"isLoggedIn\">\n        <b>Log Out</b>\n      </button>\n    </mat-toolbar>\n  \n  </div>\n  \n</body>\n\n  \n\n\n\n"
+module.exports = "<body>\n\n  <div *ngIf=\"isLoggedIn$ | async as isLoggedIn\">\n  \n    <mat-toolbar color=\"primary\">\n      <span>\n        <h1>{{ title }}</h1>\n      </span>\n      <span class=\"fill-remaining-space\"></span>\n      <!-- Home button on the header -->\n      <button mat-button routerLink=\"/home\">\n        <b>Home</b>\n      </button>\n      <!-- View button on the header -->\n      <button mat-button routerLink=\"/report\">\n        <b>View Report</b>\n      </button>\n      <!-- Upload button on the header -->\n      <button mat-button routerLink=\"/upload-file\">\n        <b>Upload Report</b>\n      </button>\n      <!-- Log Out button on the header -->\n      <button mat-button color=\"accent\" (click)=\"onLogout()\" *ngIf=\"isLoggedIn\">\n        <b>Log Out</b>\n      </button>\n\n    </mat-toolbar>\n  \n  </div>\n  \n</body>\n\n  \n\n\n\n"
 
 /***/ }),
 
@@ -921,6 +1119,167 @@ var HeaderComponent = (function () {
 
 /***/ }),
 
+/***/ "./src/app/home/home.component.css":
+/***/ (function(module, exports) {
+
+module.exports = "/********************************************************************************************/\n.container {\n    margin: 0 auto;\n    width: -webkit-fit-content;\n    width: -moz-fit-content;\n    width: fit-content;\n}\n*{ text-align: center; }\n/********************************************************************************************/\n/* css to display content in separate blocks on the page                                    */\n/********************************************************************************************/\n#left {\n  float: left;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n#first {\n    width: 0 auto;\n    float: left;\n    height: auto;\n    text-align: center;\n    padding-right: 50px;\n}\n#second {\n    width: -webkit-fit-content;\n    width: -moz-fit-content;\n    width: fit-content;\n    float: left;\n    height: auto;\n    text-align: center;\n}\n.orglist {\n    width: 0 auto;\n    text-align: center;\n}\n.error {\n        width: 0 auto;\n        padding: 4px;\n        color: #ff0000;\n    }\n/********************************************************************************************/\n/* button CSS style                                                                         */\n/********************************************************************************************/\nbutton {\n    border: none;\n    color: white;\n    font-size: 20px;\n    margin: 4px 2px;\n    cursor: pointer;\n    padding: 15px 32px;\n    text-align: center;\n    border-radius: 12px;\n    text-decoration: none;\n    display: inline-block;\n    transition-duration: 0.4s;\n    -webkit-transition-duration: 0.4s; /* Safari */\n    background: -webkit-gradient(linear,left top, right top,from(#fd80ff), to(#00bfff));\n    background: linear-gradient(to right,#fd80ff, #00bfff);\n}\nbutton:hover {\n    background: #00bfff;\n    -webkit-box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);\n            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);\n}\n/********************************************************************************************/\n/* CSS style that display the list of organization in a fashiion way                        */\n/********************************************************************************************/\n.list-org .text {\n    top: -3px;\n    position: relative;\n}\n.list-org {\n    width: 15em auto;\n    padding: 5px;\n    margin: 40px auto;\n    list-style-type: none;\n}\n.list-org li:hover {\n    left: .1em;\n    color: black;\n    background-color: #66b5ff;\n}\n.list-org li {\n    left: 0;\n    margin: .5em;\n    padding: .3em;\n    height: 1.6em;\n    cursor: pointer;\n    font-weight: normal;\n    border-radius: 4px;\n    position: relative;\n    color: wheat;\n}\n.org-list {\n  left: -1px;\n  top: -4px;\n  height: 1.8em;\n  color: white;\n  line-height: 1em;\n  font-size: small;\n  position: relative;\n  margin-right: .8em;\n  display: inline-block;\n  border-radius: 4px 0 0 4px;\n  background-color: #607D8B;\n  padding: 0.8em 0.7em 0 0.7em;\n}\n.list-org li.selected:hover {\n    color: white;\n    background-color: #BBD8DC !important;\n}\n.selected {\n    color: white;\n    background-color: #CFD8DC !important;\n}\n/********************************************************************************************/\n/* View by date Form CSS style                                                              */\n/********************************************************************************************/\n.form-style-5 label {\n    display: block;\n    margin-bottom: 10px;\n    color: white;\n    font-style: italic;\n}\n.form-style-5 legend {\n    color: #1abc9c;\n    font-size: 1.5em;\n    margin-bottom: 10px;\n}\n.form-style-5 fieldset{ border: none; }\n.form-style-5 select {\n    height:50px;\n    -webkit-appearance: menulist-button; \n}\n.form-style-5 input[type=\"submit\"]:hover,\n.form-style-5 input[type=\"button\"]:hover\n{\n    background: #109177;\n}\n.form-style-5 input[type=\"submit\"],\n.form-style-5 input[type=\"button\"]\n{\n    width: 100%;\n    color: #FFF;\n    margin: 0 auto;\n    display: block;\n    font-size: 20px;\n    position: relative;\n    text-align: center;\n    font-style: normal;\n    margin-bottom: 10px;\n    background: #1abc9c;\n    border-width: 1px 1px 3px;\n     border: 1px solid #16a085;\n    padding: 19px 39px 18px 39px;  \n}\n.form-style-5 .number \n{\n    width: 50px;\n    height: 50px;\n    color: #fff;\n    font-size: 0.8em;\n    margin-right: 4px;\n    line-height: 50px;\n    text-align: center;\n    display: inline-block;\n    background: #1abc9c;\n    border-radius: 15px 15px 15px 0px;\n    text-shadow: 0 1px 0 rgba(255,255,255,0.2);\n}\n.form-style-5\n{\n    padding: 50px;\n    max-width: 400px;\n    margin: 40px auto;\n    padding: 40px 50px;\n    border-radius: 10px;\n    background: url(https://yannmjl.github.io/cloudRepo-report/assets/bg.jpg);\n    font-family: Georgia, \"Times New Roman\", Times, serif;\n}\n.form-style-5 select:focus,\n.form-style-5 textarea:focus,\n.form-style-5 input[type=\"url\"]:focus,\n.form-style-5 input[type=\"text\"]:focus,\n.form-style-5 input[type=\"date\"]:focus,\n.form-style-5 input[type=\"time\"]:focus,\n.form-style-5 input[type=\"file\"]:focus,\n.form-style-5 input[type=\"email\"]:focus,\n.form-style-5 input[type=\"number\"]:focus,\n.form-style-5 input[type=\"search\"]:focus,\n.form-style-5 input[type=\"datetime\"]:focus \n{\n    background: #d2d9dd;\n}\n.form-style-5 select,\n.form-style-5 textarea,\n.form-style-5 input[type=\"url\"],\n.form-style-5 input[type=\"text\"],\n.form-style-5 input[type=\"date\"],\n.form-style-5 input[type=\"time\"],\n.form-style-5 input[type=\"file\"],\n.form-style-5 input[type=\"email\"],\n.form-style-5 input[type=\"number\"],\n.form-style-5 input[type=\"search\"],\n.form-style-5 input[type=\"datetime\"] \n{\n    margin: 0;\n    outline: 0;\n    width: 100%;\n    padding: 10px;\n    border: none;\n    font-size: 20px;\n    color:#8a97a0;\n    background: white;\n    border-radius: 4px;\n    margin-bottom: 30px;\n    box-sizing: border-box;\n    -moz-box-sizing: border-box;\n    background-color: #e8eeef;\n    -webkit-box-sizing: border-box;\n    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;\n    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;\n    font-family: Georgia, \"Times New Roman\", Times, serif;\n}\n/********************************************************************************************/\n/* View by name Form CSS style                                                              */\n/********************************************************************************************/\ninput[type=text] {\n    width: 130px;\n    font-size: 16px;\n    border-radius: 4px;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    border: 2px solid #ccc;\n    background-color: white;\n    background-repeat: no-repeat;\n    padding: 12px 20px 12px 40px;\n    background-position: 10px 10px; \n    transition: width 0.4s ease-in-out;\n    -webkit-transition: width 0.4s ease-in-out;\n    background-image: url(https://yannmjl.github.io/cloudRepo-report/assets/searchicon_.png);    \n}\ninput[type=text]:focus {\n    width: 100%;\n}\n.form-org\n{\n    padding: 50px;\n    max-width: 400px;\n    margin: 40px auto;\n    padding: 40px 50px;\n    border-radius: 10px;\n    background: url(https://yannmjl.github.io/cloudRepo-report/assets/bg.jpg);\n    font-family: Georgia, \"Times New Roman\", Times, serif;\n}\n.form-org legend {\n    color: #1abc9c;\n    font-size: 1.5em;\n    margin-bottom: 10px;\n}\n.form-org fieldset{ border: none; }\n.form-org .number \n{\n    width: 50px;\n    height: 50px;\n    color: #fff;\n    font-size: 0.8em;\n    margin-right: 4px;\n    line-height: 50px;\n    text-align: center;\n    display: inline-block;\n    background: #1abc9c;\n    border-radius: 15px 15px 15px 0px;\n    text-shadow: 0 1px 0 rgba(255,255,255,0.2);\n}\n/********************************************************************************************/"
+
+/***/ }),
+
+/***/ "./src/app/home/home.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<body>\n\n  <div class=\"container\">\n\n    <div id=\"left\">\n\n      <div id=\"first\">\n\n        <div class=\"form-org\">\n\n          <form>\n            <fieldset>\n              <legend>\n                <span class=\"number\">1</span>View Report By Name \n              </legend>\n              <br>\n              <input type=\"text\" name=\"search\" placeholder=\"Search...\" [(ngModel)]=\"filter\">\n            </fieldset>\n\n            <ul class=\"list-org\">\n              <li *ngFor=\"let report of ListOfOrganizationInReport | filter:filter | orderBy : ['organization'] | paginate: { itemsPerPage: 5, currentPage: p }\"\n                [class.selected]=\"report === selectedreport\" (click)=\"onSelect(report, getreportByName(report.organization))\" [routerLink]=\"['/detail', report.organization]\">\n                {{ report.organization }}\n              </li>\n            </ul>\n\n            <pagination-controls (pageChange)=\"p = $event\"></pagination-controls>\n            \n          </form>\n\n        </div>\n        \n      </div>\n\n      <div id=\"second\">\n\n        <div class=\"form-style-5\">\n          <form #myform=\"ngForm\" (ngSubmit)=\"viewReport()\" novalidate>\n            <fieldset>\n              <legend>\n                <span class=\"number\">2</span>View By Date\n              </legend>\n              <label for=\"date\">'Report dates are marked with a red dot on the calender'</label><br>\n              <my-date-picker name=\"mydate\" [options]=\"myDatePickerOptions\" placeholder=\"Select date..\" [(ngModel)]=\"model\" required></my-date-picker>\n              <p class=\"error\" *ngIf=\"!myform.valid\">Date is required!</p>\n            </fieldset>\n            <br>\n            <div>\n              <!-- button to trigger the file upload when submitted -->\n              <button type=\"button\" class=\"btn btn-success btn-s\" type=\"submit\">View Report</button>\n            </div>\n          </form>\n        </div>\n        \n      </div>\n\n    </div>\n\n  </div>\n\n</body>"
+
+/***/ }),
+
+/***/ "./src/app/home/home.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_report_service__ = __webpack_require__("./src/app/shared/report.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_order_by_pipe__ = __webpack_require__("./src/app/shared/order-by.pipe.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var HomeComponent = (function () {
+    // private model: any = {jsdate: new Date()};   // initialize today with jsdate property
+    // private model: any = {formatted: '24.09.2018'};   // this example is initialized to specific dat
+    // private model: any = {date: {year: 2018, month: 10, day: 9}};   // this example is initialized to specific date
+    function HomeComponent(router, fb, datePipe, orderByPipe, reportService) {
+        this.router = router;
+        this.fb = fb;
+        this.datePipe = datePipe;
+        this.orderByPipe = orderByPipe;
+        this.reportService = reportService;
+        this.report = [];
+        this.datesInReport = [];
+        this.model = null; // not initial date set (use null or empty string)
+    }
+    HomeComponent.prototype.ngOnInit = function () {
+        console.log('in home report');
+        // init get dates in report
+        this.getDatesInReport();
+        // init get list of organizations
+        this.getListOfOrganization();
+        this.myform = this.fb.group({
+            // myDate: [null, Validators.required]   // not initial date set
+            myDate: [{ jsdate: new Date() }, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["j" /* Validators */].required] // initialize today with jsdate property
+            // myDate: [{ date: { year: 2018, month: 10, day: 9 } }, Validators.required]   // this example is initialized to specific date
+        });
+    };
+    HomeComponent.prototype.onSelect = function (report, name) {
+        this.selectedreport = report;
+        name = this.selectedreport.organization;
+    };
+    HomeComponent.prototype.setOrder = function (value) {
+        if (this.order === value) {
+            this.reverse = !this.reverse;
+            if (this.reverse === true) {
+                value = '-' + value;
+            }
+        }
+        this.order = value;
+        console.log('in setOrder, reverse value: ' + this.reverse);
+        console.log('in setOrder, order by: ' + this.order);
+    };
+    HomeComponent.prototype.getListOfOrganization = function () {
+        var _this = this;
+        console.log('get list of organization in report');
+        this.reportService.getReports()
+            .subscribe(function (data) {
+            // sort organization in the report by Ascending order
+            _this.ListOfOrganizationInReport = _this.orderByPipe.transform(data, 'organization');
+        });
+    };
+    HomeComponent.prototype.viewReport = function () {
+        // get date from form
+        this.reportDate = this.model.jsdate.toISOString();
+        // view report by calling its route and passing the date
+        this.router.navigate(['/detail-date', this.reportDate]);
+    };
+    HomeComponent.prototype.onDateChanged = function (event) {
+        console.log('onDateChanged(): ', event.date, ' - formatted: ', event.formatted, ' - epoc timestamp: ', event.epoc, ' - jsdate: ', new Date(event.jsdate).toLocaleDateString());
+    };
+    HomeComponent.prototype.getreportByName = function (name) {
+        var _this = this;
+        console.log('get report by org name');
+        this.reportService
+            .getReportByName(name)
+            .subscribe(function (reports) { return (_this.reportsByName = reports); });
+    };
+    HomeComponent.prototype.getDatesInReport = function () {
+        var _this = this;
+        this.reportService.getDateInReport()
+            .subscribe(function (reports) {
+            _this.report = reports;
+            // get day, month, and year from dates in report
+            _this.myDates = [
+                {
+                    dates: _this.report.map(function (item) {
+                        _this.date = new Date(item.date);
+                        _this.day = _this.date.getDate();
+                        _this.month = _this.date.getMonth() + 1;
+                        _this.year = _this.date.getUTCFullYear();
+                        console.log('the date is: ' + _this.date);
+                        console.log('day in date ' + _this.day);
+                        console.log('Month in date ' + _this.month);
+                        console.log('year in date ' + _this.year);
+                        return { year: _this.year, month: _this.month, day: _this.day };
+                    }), color: '#cc0000'
+                }
+            ];
+            // calender specs
+            _this.myDatePickerOptions = {
+                inline: false,
+                width: '250px',
+                height: '40px',
+                sunHighlight: false,
+                selectorWidth: '400px',
+                selectorHeight: '300px',
+                markDates: _this.myDates,
+                dateFormat: 'd mmm yyyy',
+                selectionTxtFontSize: '14px',
+            };
+        });
+    };
+    HomeComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            providers: [__WEBPACK_IMPORTED_MODULE_4__angular_common__["DatePipe"], __WEBPACK_IMPORTED_MODULE_5__shared_order_by_pipe__["a" /* OrderByPipe */]],
+            selector: 'app-home',
+            template: __webpack_require__("./src/app/home/home.component.html"),
+            styles: [__webpack_require__("./src/app/home/home.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormBuilder */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_common__["DatePipe"],
+            __WEBPACK_IMPORTED_MODULE_5__shared_order_by_pipe__["a" /* OrderByPipe */],
+            __WEBPACK_IMPORTED_MODULE_3__shared_report_service__["a" /* ReportService */]])
+    ], HomeComponent);
+    return HomeComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/layouts/home-layout.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -940,41 +1299,11 @@ var HomeLayoutComponent = (function () {
     HomeLayoutComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-home-layout',
-            template: "\n    <app-header></app-header>\n    <router-outlet></router-outlet>\n  ",
+            template: "\n    <router-outlet></router-outlet>\n  ",
             styles: []
         })
     ], HomeLayoutComponent);
     return HomeLayoutComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/layouts/login-layout.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginLayoutComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-var LoginLayoutComponent = (function () {
-    function LoginLayoutComponent() {
-    }
-    LoginLayoutComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-login-layout',
-            template: "\n    <router-outlet></router-outlet>\n  ",
-            styles: []
-        })
-    ], LoginLayoutComponent);
-    return LoginLayoutComponent;
 }());
 
 
@@ -991,7 +1320,7 @@ module.exports = "/*************************************************************
 /***/ "./src/app/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<body>\n  \n  <div class=\"container-login100\">\n\n    <h1>{{ title }}</h1>\n  \n    <div class=\"signin-content\">\n\n      <popup #popupLogIn (confirmClick)=\"logInEvent()\">Wrong password or username. Please try again!</popup>\n\n      <div id=\"shadow-login\">\n\n        <mat-card>\n          <mat-card-content>\n            <form [formGroup]=\"myForm\" (ngSubmit)=\"onSubmit()\">\n              <h2>Please login to continue</h2>\n              <mat-input-container class=\"full-width-input\">\n                <input matInput placeholder=\"UserName\" formControlName=\"userName\" required>\n                <mat-error *ngIf=\"isFieldInvalid('userName')\">\n                  Please enter your user name\n                </mat-error>\n              </mat-input-container>\n              <br>\n              <br>\n              <mat-input-container class=\"full-width-input\">\n                <input matInput type=\"password\" placeholder=\"Password\" formControlName=\"password\" required>\n                <mat-error *ngIf=\"isFieldInvalid('userName')\">\n                  Please enter your password\n                </mat-error>\n              </mat-input-container>\n              <br>\n              <br>\n              <br>\n        \n        \n              <div class=\"container-login100-form-btn\">\n                <div class=\"wrap-login100-form-btn\">\n                  <div class=\"login100-form-bgbtn\"></div>\n                  <button class=\"login100-form-btn\" mat-raised-button type=\"submit\" (click)=\"isAuthenticated()\">\n                    <b>Log In</b>\n                  </button>\n                </div>\n              </div>\n              <br>\n              <br>\n        \n            </form>\n          </mat-card-content>\n        </mat-card>\n\n      </div>\n\n    </div>\n  \n  </div>\n\n</body>\n\n"
+module.exports = "<body>\n  \n  <div class=\"container-login100\">\n\n    <h1>{{ title }}</h1>\n  \n    <div class=\"signin-content\">\n\n      <popup #popupLogIn (confirmClick)=\"logInEvent()\">Wrong password or username. Please try again!</popup>\n\n      <div id=\"shadow-login\">\n\n        <mat-card>\n          <mat-card-content>\n            <form [formGroup]=\"myForm\" (ngSubmit)=\"onSubmit()\">\n              <h2>Please login to continue</h2>\n              <mat-input-container class=\"full-width-input\">\n                <input matInput placeholder=\"UserName\" formControlName=\"userName\" required>\n                <mat-error *ngIf=\"isFieldInvalid('userName')\">\n                  Please enter your user name\n                </mat-error>\n              </mat-input-container>\n              <br>\n              <br>\n              <mat-input-container class=\"full-width-input\">\n                <input matInput type=\"password\" placeholder=\"Password\" formControlName=\"password\" required>\n                <mat-error *ngIf=\"isFieldInvalid('userName')\">\n                  Please enter your password\n                </mat-error>\n              </mat-input-container>\n              <br>\n              <br>\n              <br>\n        \n        \n              <div class=\"container-login100-form-btn\">\n                <div class=\"wrap-login100-form-btn\">\n                  <div class=\"login100-form-bgbtn\"></div>\n                  <button class=\"login100-form-btn\" mat-raised-button type=\"submit\">\n                    <b>Log In</b>\n                  </button>\n                </div>\n              </div>\n              <br>\n              <br>\n        \n            </form>\n          </mat-card-content>\n        </mat-card>\n\n      </div>\n\n    </div>\n  \n  </div>\n\n</body>\n\n"
 
 /***/ }),
 
@@ -1019,8 +1348,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-// define the constant url we would be post user creds details
-var apiUrl = 'https://web-server-reports.herokuapp.com/login';
 var LoginComponent = (function () {
     function LoginComponent(popup, fb, http, authService) {
         this.popup = popup;
@@ -1040,38 +1367,34 @@ var LoginComponent = (function () {
             (this.myForm.get(field).untouched && this.formSubmitAttempt));
     };
     LoginComponent.prototype.isAuthenticated = function () {
+        console.log('inside isauthenticated');
         this.popupLogin.options = {
             header: 'Access Denied',
             color: '#9f80ff',
-            // widthProsentage: 30, // The with of the popou measured by browser width
             animationDuration: 1,
-            showButtons: true,
-            confirmBtnContent: 'Try Agin',
             cancleBtnContent: 'close',
-            // confirmBtnClass: 'btn btn-default', // your class for styling the confirm button
+            confirmBtnContent: 'Try Agin',
+            // widthProsentage: 30, // The with of the popou measured by browser width
+            showButtons: true,
             // cancleBtnClass: 'btn btn-default', // you class for styling the cancel button
-            animation: 'fadeInDown' // 'fadeInLeft', 'fadeInRight', 'fadeInUp', 'bounceIn','bounceInDown'
+            // confirmBtnClass: 'btn btn-default', // your class for styling the confirm button
+            animation: 'bounceInDown' // 'fadeInLeft', 'fadeInRight', 'fadeInUp', 'fadeInDown', 'bounceIn'
         };
-        if (this.authService.isLoggedIn) {
-            this.popupLogin.show(this.popupLogin.options);
+        if (this.authService.isLoginPostLoadign) {
+            if (this.authService.isLoggedIn$$) {
+                this.popupLogin.show(this.popupLogin.options);
+            }
+            else {
+                this.popupLogin.hide();
+            }
         }
-        console.log('display successful or unsuccessful log in');
     };
     LoginComponent.prototype.onSubmit = function () {
         if (this.myForm.valid) {
-            this.authService.login(this.myForm.value);
-            /*
-            this.http
-              .post(apiUrl, this.myForm.value)
-              .subscribe(success => {
-                alert('post login succeful');
-              },
-                error => { alert(error); }
-            );
-            */
+            this.authService.getLoginPostData(this.myForm.value);
+            this.isAuthenticated();
         }
         this.formSubmitAttempt = true;
-        console.log('on submit action');
     };
     LoginComponent.prototype.logInEvent = function () {
         this.popupLogin.hide();
@@ -1105,14 +1428,14 @@ var LoginComponent = (function () {
 /***/ "./src/app/reports/reports.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "/********************************************************************************************/\n.container {\n    margin: auto;\n    width: -webkit-fit-content;\n    width: -moz-fit-content;\n    width: fit-content;\n}\n*{ text-align: center; }\n/********************************************************************************************/\n/* css to display content in separate blocks on the page                                    */\n/********************************************************************************************/\n#left {\n  float: left;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n  padding-right: 50px;\n}\n#first {\n    width: auto;\n    float: left;\n    height: auto;\n    text-align: center;\n    padding-right: 50px;\n}\n#second {\n    width: auto;\n    float: left;\n    height: auto;\n    text-align: center;\n}\n/********************************************************************************************/\n/* button CSS style                                                                         */\n/********************************************************************************************/\nbutton {\n    border: none;\n    color: white;\n    font-size: 16px;\n    margin: 4px 2px;\n    cursor: pointer;\n    padding: 15px 32px;\n    text-align: center;\n    border-radius: 12px;\n    text-decoration: none;\n    display: inline-block;\n    background-color: #b30000;\n    transition-duration: 0.4s;\n    -webkit-transition-duration: 0.4s; /* Safari */\n}\nbutton:hover {\n    background-color: #660000;\n    -webkit-box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);\n            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);\n}\n/********************************************************************************************/\n/* loader spinner css                                                                       */\n/********************************************************************************************/\n.loader {\n    top: 50%;\n    left: 50%;\n    width: 120px;\n    height: 120px;\n    position: fixed;\n    margin-top: -9em;                         /* set to a negative number 1/2 of the height */\n    margin-left: -15em;                        /* set to a negative number 1/2 of the width */\n    border-radius: 50%;\n    border: 16px solid #f3f3f3;\n    border-top: 16px solid #3498db;\n    -webkit-animation: spin 2s linear infinite;\n            animation: spin 2s linear infinite;\n\n}\n@-webkit-keyframes spin {\n    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }\n    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }\n}\n@keyframes spin {\n    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }\n    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }\n}\n/********************************************************************************************/\n/* CSS style that display the list of organization in a fashiion way                        */\n/********************************************************************************************/\n.list-org .text {\n    top: -3px;\n    position: relative;\n}\n.list-org {\n    width: 15em;\n    padding: 5px;\n    margin: 0 0 2em 0;\n    list-style-type: none;\n}\n.list-org li:hover {\n    left: .1em;\n    color: #607D8B;\n    background-color: #DDD;\n}\n.list-org li {\n    left: 0;\n    margin: .5em;\n    padding: .3em;\n    height: 1.6em;\n    cursor: pointer;\n    font-weight: bold;\n    border-radius: 4px;\n    position: relative;\n    background-color: white;\n}\n.org-list {\n  left: -1px;\n  top: -4px;\n  height: 1.8em;\n  color: white;\n  line-height: 1em;\n  font-size: small;\n  position: relative;\n  margin-right: .8em;\n  display: inline-block;\n  border-radius: 4px 0 0 4px;\n  background-color: #607D8B;\n  padding: 0.8em 0.7em 0 0.7em;\n}\n.list-org li.selected:hover {\n    color: white;\n    background-color: #BBD8DC !important;\n}\n.selected {\n    color: white;\n    background-color: #CFD8DC !important;\n}\n/********************************************************************************************/\n\n"
+module.exports = "/********************************************************************************************/\n.container {\n    margin: auto;\n    width: -webkit-fit-content;\n    width: -moz-fit-content;\n    width: fit-content;\n}\n*{ text-align: center; }\n/********************************************************************************************/\n/* css to display content in separate blocks on the page                                    */\n/********************************************************************************************/\n#left {\n  float: left;\n  width: 0 auto;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n#first {\n    width: 0 auto;\n    float: left;\n    height: auto;\n    text-align: center;\n    margin: 20px auto;\n}\n#second {\n    width: 0 auto;\n    float: left;\n    height: auto;\n    text-align: center;\n    margin: 20px auto;\n}\n/********************************************************************************************/\n/* button CSS style                                                                         */\n/********************************************************************************************/\nbutton {\n    border: none;\n    color: white;\n    font-size: 16px;\n    margin: 4px 2px;\n    cursor: pointer;\n    padding: 15px 32px;\n    text-align: center;\n    border-radius: 12px;\n    text-decoration: none;\n    display: inline-block;\n    background-color: #b30000;\n    transition-duration: 0.4s;\n    -webkit-transition-duration: 0.4s; /* Safari */\n}\nbutton:hover {\n    background-color: #660000;\n    -webkit-box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);\n            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);\n}\n/********************************************************************************************/\n/* loader spinner css                                                                       */\n/********************************************************************************************/\n.loader {\n    top: 50%;\n    left: 50%;\n    width: 120px;\n    height: 120px;\n    position: fixed;\n    margin-top: -9em;                         /* set to a negative number 1/2 of the height */\n    margin-left: -15em;                        /* set to a negative number 1/2 of the width */\n    border-radius: 50%;\n    border: 16px solid #f3f3f3;\n    border-top: 16px solid #3498db;\n    -webkit-animation: spin 2s linear infinite;\n            animation: spin 2s linear infinite;\n\n}\n@-webkit-keyframes spin {\n    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }\n    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }\n}\n@keyframes spin {\n    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }\n    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }\n}\n/********************************************************************************************/\n/* CSS style that display the list of organization in a fashiion way                        */\n/********************************************************************************************/\n.list-org .text {\n    top: -3px;\n    position: relative;\n}\n.list-org {\n    width: 0 auto;\n    padding: 5px;\n    margin: 10px auto;\n    list-style-type: none;\n}\n.list-org li:hover {\n    left: .1em;\n    color: white;\n    font-weight: lighter;\n    background-color:#66b5ff;\n}\n.list-org li {\n    left: 0;\n    margin: .5em;\n    padding: .3em;\n    height: 1.6em;\n    cursor: pointer;\n    font-size: 15px;\n    border-radius: 4px;\n    position: relative;\n    font-family: Georgia;\n}\n.org-list {\n  left: -1px;\n  top: -4px;\n  height: 1.8em;\n  color: white;\n  line-height: 1em;\n  font-size: small;\n  position: relative;\n  margin-right: .8em;\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  border-radius: 4px 0 0 4px;\n  background-color: #607D8B;\n  padding: 0.8em 0.7em 0 0.7em;\n  -ms-flex-line-pack: center;\n      align-content: center;\n}\n.list-org li.selected:hover {\n    color: white;\n    background-color: #BBD8DC !important;\n}\n.selected {\n    color: white;\n    background-color: #CFD8DC !important;\n}\n/********************************************************************************************/\n.my-pagination /deep/ .ngx-pagination .current {\n    width: 0 auto;\n    -ms-flex-item-align: auto;\n        -ms-grid-row-align: auto;\n        align-self: auto;\n}\ninput[type=text] {\n    width: 130px;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    border: 2px solid #ccc;\n    border-radius: 4px;\n    font-size: 16px;\n    background-color: white;\n    background-image: url(https://yannmjl.github.io/cloudRepo-report/assets/searchicon_.png);\n    background-position: 10px 10px; \n    background-repeat: no-repeat;\n    padding: 12px 20px 12px 40px;\n    -webkit-transition: width 0.4s ease-in-out;\n    transition: width 0.4s ease-in-out;\n}\ninput[type=text]:focus {\n    width: 100%;\n}\n"
 
 /***/ }),
 
 /***/ "./src/app/reports/reports.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<body>\n\n  <popup #popupReport (confirmClick)=\"ConfirmDeleteEvent()\" (cancelClick)=\"CancelDeleteEvent()\">\n    <b>Are you sure you want to delete all the reports permanently?</b>\n  </popup>\n\n  <div class=\"container\">\n\n    <div id=\"left\">\n\n      <h2>Get report by organizarion or date</h2>\n\n      <div id=\"first\">\n        <ul class=\"list-org\">\n          <li *ngFor=\"let report of reports | orderBy : ['organization']\" \n            [class.selected]=\"report === selectedreport\" \n            (click)=\"onSelect(report, getreportByName(report.organization))\" \n            [routerLink]=\"['/detail', report.organization]\">\n            {{ report.organization }}\n          </li>\n        </ul>\n      </div>\n\n      <div id=\"second\" ng-controller=\"datCtrl\">\n        <ul class=\"list-org\">\n          <li *ngFor=\"let report of reportDate\" \n            [class.selected]=\"report === selecteddate\" \n            (click)=\"onSelectDate(report, getreportBydate(report.date))\" \n            [routerLink]=\"['/detail-date', report.date]\">\n            {{ report.date | date : \"MMMM d, y\" }}\n          </li>\n        </ul>\n      </div>\n\n    </div>\n\n    <div>\n      <button type=\"button\" class=\"btn btn-success btn-s\" (click)=\"deleteAllReport()\">\n        Delete All Reports\n      </button>\n    </div>\n\n  </div>\n\n</body>\n"
+module.exports = "<body>\n\n  <popup #popupReport (confirmClick)=\"ConfirmDeleteEvent()\" (cancelClick)=\"CancelDeleteEvent()\">\n    <b>Are you sure you want to delete all the reports permanently?</b>\n  </popup>\n\n  <div class=\"container\">\n\n    <div id=\"left\">\n\n      <h2>List of all Organizations and Dates in report</h2>\n\n      <div id=\"first\">\n\n        <form>\n          <input type=\"text\" name=\"search\" placeholder=\"Search...\" [(ngModel)]=\"filter\">\n        </form>\n\n        <ul class=\"list-org\">\n          <li *ngFor=\"let report of reports | filter:filter | orderBy : ['organization'] | paginate: { id: 'first', itemsPerPage: 9, currentPage: currentpage, totalItems: total }\"\n            [class.selected]=\"report === selectedreport\" \n            (click)=\"onSelect(report, getreportByName(report.organization))\" \n            [routerLink]=\"['/detail', report.organization]\">\n            {{ report.organization }}\n          </li>\n        </ul>\n        <pagination-controls class=\"my-pagination\" (pageChange)=\"currentpage = $event\" id=\"first\"></pagination-controls>\n      </div>\n\n      <div id=\"second\" ng-controller=\"datCtrl\">\n        <ul class=\"list-org\">\n          <li *ngFor=\"let report of reportDate | paginate: { id: 'second', itemsPerPage: 10, currentPage: currentPage, totalItems: total }\" \n            [class.selected]=\"report === selecteddate\" \n            (click)=\"onSelectDate(report, getreportBydate(report.date))\" \n            [routerLink]=\"['/detail-date', report.date]\">\n            {{ report.date | date : \"MMMM d, y\" }}\n          </li>\n        </ul>\n        <pagination-controls (pageChange)=\"currentPage = $event\" id=\"second\"></pagination-controls>\n      </div>\n\n    </div>\n\n    <div>\n      <button type=\"button\" class=\"btn btn-success btn-s\" (click)=\"deleteAllReport()\">\n        Delete All Reports\n      </button>\n    </div>\n\n  </div>\n\n</body>\n"
 
 /***/ }),
 
@@ -1143,6 +1466,8 @@ var ReportsComponent = (function () {
         this.popup = popup;
         this.router = router;
         this.reportService = reportService;
+        this.Currentpae = 1;
+        this.currentPage = 1;
     }
     ReportsComponent.prototype.ngOnInit = function () {
         console.log('initialize get report');
@@ -1237,14 +1562,16 @@ var ReportsComponent = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RoutingModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__display_by_organization_report_detail_component__ = __webpack_require__("./src/app/display-by-organization/report-detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__auth_auth_guard__ = __webpack_require__("./src/app/auth/auth.guard.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__auth_auth_guard__ = __webpack_require__("./src/app/auth/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home_component__ = __webpack_require__("./src/app/home/home.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_login_component__ = __webpack_require__("./src/app/login/login.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__reports_reports_component__ = __webpack_require__("./src/app/reports/reports.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__display_by_date_display_by_date_component__ = __webpack_require__("./src/app/display-by-date/display-by-date.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__layouts_home_layout_component__ = __webpack_require__("./src/app/layouts/home-layout.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__file_upload_file_upload_component__ = __webpack_require__("./src/app/file-upload/file-upload.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__display_by_date_display_by_date_component__ = __webpack_require__("./src/app/display-by-date/display-by-date.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__display_by_organization_report_detail_component__ = __webpack_require__("./src/app/display-by-organization/report-detail.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1254,18 +1581,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+// import components
+
+
 
 
 
 
 
 var routes = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_5__reports_reports_component__["a" /* ReportsComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_3__auth_auth_guard__["a" /* AuthGuard */]] },
+    { path: '',
+        component: __WEBPACK_IMPORTED_MODULE_6__layouts_home_layout_component__["a" /* HomeLayoutComponent */],
+        canActivate: [__WEBPACK_IMPORTED_MODULE_0__auth_auth_guard__["a" /* AuthGuard */]],
+        children: [
+            { path: '', component: __WEBPACK_IMPORTED_MODULE_5__reports_reports_component__["a" /* ReportsComponent */] },
+            { path: 'home', component: __WEBPACK_IMPORTED_MODULE_3__home_home_component__["a" /* HomeComponent */] },
+            { path: 'report', component: __WEBPACK_IMPORTED_MODULE_5__reports_reports_component__["a" /* ReportsComponent */] },
+            { path: 'upload-file', component: __WEBPACK_IMPORTED_MODULE_7__file_upload_file_upload_component__["a" /* FileUploadComponent */] },
+            { path: 'detail/:id', component: __WEBPACK_IMPORTED_MODULE_9__display_by_organization_report_detail_component__["a" /* ReportDetailComponent */], data: [{ isProd: true }] },
+            { path: 'detail-date/:id', component: __WEBPACK_IMPORTED_MODULE_8__display_by_date_display_by_date_component__["a" /* DisplayByDateComponent */], data: [{ isProd: true }] },
+        ]
+    },
     { path: 'login', component: __WEBPACK_IMPORTED_MODULE_4__login_login_component__["a" /* LoginComponent */] },
-    { path: 'report', component: __WEBPACK_IMPORTED_MODULE_5__reports_reports_component__["a" /* ReportsComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_3__auth_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'upload-file', component: __WEBPACK_IMPORTED_MODULE_7__file_upload_file_upload_component__["a" /* FileUploadComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_3__auth_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'detail/:id', component: __WEBPACK_IMPORTED_MODULE_0__display_by_organization_report_detail_component__["a" /* ReportDetailComponent */], data: [{ isProd: true }], canActivate: [__WEBPACK_IMPORTED_MODULE_3__auth_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'detail-date/:id', component: __WEBPACK_IMPORTED_MODULE_6__display_by_date_display_by_date_component__["a" /* DisplayByDateComponent */], data: [{ isProd: true }], canActivate: [__WEBPACK_IMPORTED_MODULE_3__auth_auth_guard__["a" /* AuthGuard */]] },
     { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 var RoutingModule = (function () {
@@ -1465,10 +1802,12 @@ var OrderByPipe = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReportService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_observable_throw__ = __webpack_require__("./node_modules/rxjs/_esm5/add/observable/throw.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_operators__ = __webpack_require__("./node_modules/rxjs/_esm5/operators.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_ErrorObservable__ = __webpack_require__("./node_modules/rxjs/_esm5/observable/ErrorObservable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__auth_auth_service__ = __webpack_require__("./src/app/auth/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operators__ = __webpack_require__("./node_modules/rxjs/_esm5/operators.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__environments_environment__ = __webpack_require__("./src/environments/environment.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_observable_ErrorObservable__ = __webpack_require__("./node_modules/rxjs/_esm5/observable/ErrorObservable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1483,54 +1822,62 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var ReportService = (function () {
-    function ReportService(http) {
+    function ReportService(http, authService) {
         this.http = http;
+        this.authService = authService;
+        // add authorization header with token
+        this.token$ = this.authService.getToken();
+        this.headers = new __WEBPACK_IMPORTED_MODULE_6__angular_common_http__["d" /* HttpHeaders */]({ 'Authorization': this.token$ });
+        this.options = { headers: this.headers };
+        var endpoint = __WEBPACK_IMPORTED_MODULE_4__environments_environment__["a" /* environment */].apiUrl;
+        this.getReportEndpoint = endpoint + '/report';
+        this.getReportByDateEndpoint = endpoint + '/date';
+        this.getDateInReportEndpoint = endpoint + '/date';
+        this.getReportByNameEndpoint = endpoint + '/name';
+        this.getChartDataByOrgEndpoint = endpoint + '/org';
+        this.getChartDataByDateEndpoint = endpoint + '/date-chart';
+        this.deleteReportByNameEndpoint = endpoint + '/delete-name';
+        this.deleteReportByDateEndpoint = endpoint + '/delete-date';
+        this.deleteAllReportEndpoint = endpoint + '/delete-all-record';
     }
     ReportService.prototype.getReports = function () {
-        var apiUrl = 'https://web-server-reports.herokuapp.com/report';
-        return this.http.get(apiUrl)
-            .pipe(Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["a" /* catchError */])(this.handleError));
-    };
-    ReportService.prototype.getDateInReport = function () {
-        var apiUrl = 'https://web-server-reports.herokuapp.com/date';
-        return this.http.get(apiUrl)
-            .pipe(Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["a" /* catchError */])(this.handleError));
-    };
-    ReportService.prototype.getReportByNameChart = function (name) {
-        var apiUrl = 'https://web-server-reports.herokuapp.com/org';
-        return this.http.get(apiUrl + "/" + name)
-            .pipe(Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["a" /* catchError */])(this.handleError));
-    };
-    ReportService.prototype.getReportByName = function (name) {
-        var apiUrl = 'https://web-server-reports.herokuapp.com/name';
-        return this.http.get(apiUrl + "/" + name)
-            .pipe(Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["a" /* catchError */])(this.handleError));
-    };
-    ReportService.prototype.getReportByDateChart = function (date) {
-        var apiUrl = 'https://web-server-reports.herokuapp.com/date-chart';
-        return this.http.get(apiUrl + "/" + date)
-            .pipe(Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["a" /* catchError */])(this.handleError));
-    };
-    ReportService.prototype.getReportByDate = function (date) {
-        var apiUrl = 'https://web-server-reports.herokuapp.com/date';
-        return this.http.get(apiUrl + "/" + date)
-            .pipe(Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["a" /* catchError */])(this.handleError));
-    };
-    ReportService.prototype.deleteReportByName = function (name) {
-        var apiUrl = 'https://web-server-reports.herokuapp.com/delete-name';
-        return this.http.get(apiUrl + "/" + name)
-            .pipe(Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["a" /* catchError */])(this.handleError));
-    };
-    ReportService.prototype.deleteReportByDate = function (date) {
-        var apiUrl = 'https://web-server-reports.herokuapp.com/delete-date';
-        return this.http.get(apiUrl + "/" + date)
-            .pipe(Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["a" /* catchError */])(this.handleError));
+        return this.http.get(this.getReportEndpoint)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["a" /* catchError */])(this.handleError));
     };
     ReportService.prototype.deleteReport = function () {
-        var apiUrl = 'https://web-server-reports.herokuapp.com/delete-all-record';
-        return this.http.get(apiUrl)
-            .pipe(Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["a" /* catchError */])(this.handleError));
+        return this.http.get(this.deleteAllReportEndpoint)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["a" /* catchError */])(this.handleError));
+    };
+    ReportService.prototype.getDateInReport = function () {
+        return this.http.get(this.getDateInReportEndpoint)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["a" /* catchError */])(this.handleError));
+    };
+    ReportService.prototype.getReportByName = function (name) {
+        return this.http.get(this.getReportByNameEndpoint + "/" + name)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["a" /* catchError */])(this.handleError));
+    };
+    ReportService.prototype.getReportByDate = function (date) {
+        return this.http.get(this.getReportByDateEndpoint + "/" + date)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["a" /* catchError */])(this.handleError));
+    };
+    ReportService.prototype.deleteReportByName = function (name) {
+        return this.http.get(this.deleteReportByNameEndpoint + "/" + name)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["a" /* catchError */])(this.handleError));
+    };
+    ReportService.prototype.deleteReportByDate = function (date) {
+        return this.http.get(this.deleteReportByDateEndpoint + "/" + date)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["a" /* catchError */])(this.handleError));
+    };
+    ReportService.prototype.getReportByDateChart = function (date) {
+        return this.http.get(this.getChartDataByDateEndpoint + "/" + date)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["a" /* catchError */])(this.handleError));
+    };
+    ReportService.prototype.getReportByNameChart = function (name) {
+        return this.http.get(this.getChartDataByOrgEndpoint + "/" + name)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["a" /* catchError */])(this.handleError));
     };
     ReportService.prototype.handleError = function (error) {
         if (error.error instanceof ErrorEvent) {
@@ -1544,11 +1891,12 @@ var ReportService = (function () {
                 ("body was: " + error.error));
         }
         // return an ErrorObservable with a user-facing error message
-        return new __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_ErrorObservable__["a" /* ErrorObservable */]('Something bad happened; please try again later.');
+        return new __WEBPACK_IMPORTED_MODULE_5_rxjs_observable_ErrorObservable__["a" /* ErrorObservable */]('Something bad happened; please try again later.');
     };
     ReportService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__angular_common_http__["b" /* HttpClient */]])
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_6__angular_common_http__["b" /* HttpClient */],
+            __WEBPACK_IMPORTED_MODULE_1__auth_auth_service__["a" /* AuthService */]])
     ], ReportService);
     return ReportService;
 }());
@@ -1587,7 +1935,9 @@ var ReportService = (function () {
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 var environment = {
-    production: false
+    production: false,
+    apiUrl: 'https://web-server-reports.herokuapp.com'
+    // apiUrl: 'http://localhost:5000'
 };
 
 
