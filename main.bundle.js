@@ -368,7 +368,6 @@ var AuthService = (function () {
         enumerable: true,
         configurable: true
     });
-    AuthService.prototype.isLoginPostLoadign = function () { return this.loginPostLoadingComplete; };
     AuthService.prototype.loginAuthBackend = function (user) {
         console.log('in login post credetntials to backend');
         var formData = new FormData();
@@ -378,6 +377,7 @@ var AuthService = (function () {
     };
     AuthService.prototype.getLoginPostData = function (user) {
         var _this = this;
+        this.loginPostLoadingComplete = true;
         this.loginAuthBackend(user)
             .finally(function () { return _this.loginPostLoadingComplete = true; })
             .subscribe(function (data) {
@@ -389,6 +389,7 @@ var AuthService = (function () {
                 console.log('value of logintoken is: ' + _this.loginToken);
                 // set loogedIn to true to indicate successful login
                 _this.loggedIn.next(true);
+                _this.loginPostLoadingComplete = true;
                 // store token in local storage to keep user logged in between page refreshes
                 localStorage.setItem(_this.storeKey, JSON.stringify({
                     token: _this.loginToken
@@ -401,6 +402,8 @@ var AuthService = (function () {
                 _this.loginToken = null;
                 // set loggedIn to false to indicate failed login
                 _this.loggedIn.next(false);
+                _this.loginPostLoadingComplete = false;
+                alert('Wrong password or username. Please try again!');
             }
         }, function (error) {
             console.log('in lodin post error' + error);
@@ -411,6 +414,9 @@ var AuthService = (function () {
     };
     AuthService.prototype.isLoggedIn$$ = function () {
         return this.loginToken !== null;
+    };
+    AuthService.prototype.isLoginPostLoadign = function () {
+        return this.loginPostLoadingComplete;
     };
     AuthService.prototype.isAuthenticated = function () {
         var token = localStorage.getItem(this.loginToken);
@@ -896,14 +902,14 @@ var ReportDetailComponent = (function () {
 /***/ "./src/app/file-upload/file-upload.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "/********************************************************************************************/\n.container {\n    margin: 0 auto;\n    width: -webkit-fit-content;\n    width: -moz-fit-content;\n    width: fit-content;\n}\n/********************************************************************************************/\n/* button CSS style                                                                         */\n/********************************************************************************************/\nbutton {\n    border: none;\n    color: white;\n    font-size: 20px;\n    margin: 4px 2px;\n    cursor: pointer;\n    padding: 15px 32px;\n    text-align: center;\n    border-radius: 12px;\n    text-decoration: none;\n    display: inline-block;\n    transition-duration: 0.4s;\n    -webkit-transition-duration: 0.4s; /* Safari */\n    background: -webkit-gradient(linear,left top, right top,from(#fd80ff), to(#00bfff));\n    background: linear-gradient(to right,#fd80ff, #00bfff);\n}\nbutton:hover {\n    background: #00bfff;\n    -webkit-box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);\n            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);\n}\n/********************************************************************************************/\n/* Upload Form CSS style                                                                    */\n/********************************************************************************************/\n.form-style-5 label {\n    display: block;\n    margin-bottom: 10px;\n    color: white;\n    font-style: italic;\n}\n.form-style-5 legend {\n    color: #1abc9c;\n    font-size: 2.0em;\n    margin-bottom: 10px;\n}\n.form-style-5 fieldset{ border: none; }\n.form-style-5 select {\n    height:50px;\n    -webkit-appearance: menulist-button; \n}\n.form-style-5 input[type=\"submit\"]:hover,\n.form-style-5 input[type=\"button\"]:hover\n{\n    background: #109177;\n}\n.form-style-5 input[type=\"submit\"],\n.form-style-5 input[type=\"button\"]\n{\n    width: 100%;\n    color: #FFF;\n    margin: 0 auto;\n    display: block;\n    font-size: 20px;\n    position: relative;\n    text-align: center;\n    font-style: normal;\n    margin-bottom: 10px;\n    background: #1abc9c;\n    border-width: 1px 1px 3px;\n     border: 1px solid #16a085;\n    padding: 19px 39px 18px 39px;  \n}\n.form-style-5 .number \n{\n    width: 50px;\n    height: 50px;\n    color: #fff;\n    font-size: 0.8em;\n    margin-right: 4px;\n    line-height: 50px;\n    text-align: center;\n    display: inline-block;\n    background: #1abc9c;\n    border-radius: 15px 15px 15px 0px;\n    text-shadow: 0 1px 0 rgba(255,255,255,0.2);\n}\n.form-style-5\n{\n    padding: 50px;\n    max-width: 100%;\n    margin: 40px auto;\n    padding: 40px 50px;\n    border-radius: 10px;\n    background: url(https://yannmjl.github.io/cloudRepo-report/assets/bg-01.jpg);\n    font-family: Georgia, \"Times New Roman\", Times, serif;\n}\n.form-style-5 select:focus,\n.form-style-5 textarea:focus,\n.form-style-5 input[type=\"url\"]:focus,\n.form-style-5 input[type=\"text\"]:focus,\n.form-style-5 input[type=\"date\"]:focus,\n.form-style-5 input[type=\"time\"]:focus,\n.form-style-5 input[type=\"file\"]:focus,\n.form-style-5 input[type=\"email\"]:focus,\n.form-style-5 input[type=\"number\"]:focus,\n.form-style-5 input[type=\"search\"]:focus,\n.form-style-5 input[type=\"datetime\"]:focus \n{\n    background: #d2d9dd;\n}\n.form-style-5 select,\n.form-style-5 textarea,\n.form-style-5 input[type=\"url\"],\n.form-style-5 input[type=\"text\"],\n.form-style-5 input[type=\"date\"],\n.form-style-5 input[type=\"time\"],\n.form-style-5 input[type=\"file\"],\n.form-style-5 input[type=\"email\"],\n.form-style-5 input[type=\"number\"],\n.form-style-5 input[type=\"search\"],\n.form-style-5 input[type=\"datetime\"] \n{\n    margin: 0;\n    outline: 0;\n    width: 100%;\n    padding: 10px;\n    border: none;\n    font-size: 20px;\n    color:#8a97a0;\n    background: white;\n    border-radius: 4px;\n    margin-bottom: 30px;\n    box-sizing: border-box;\n    -moz-box-sizing: border-box;\n    background-color: #e8eeef;\n    -webkit-box-sizing: border-box;\n    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;\n    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;\n    font-family: Georgia, \"Times New Roman\", Times, serif;\n}\n/********************************************************************************************/\n\n\n\n"
+module.exports = "/********************************************************************************************/\n.container {\n    margin: 0 auto;\n    width: -webkit-fit-content;\n    width: -moz-fit-content;\n    width: fit-content;\n}\n.error {\n        width: 0 auto;\n        padding: 4px;\n        color: black;\n        font-weight: normal;\n}\n/********************************************************************************************/\n/* button CSS style                                                                         */\n/********************************************************************************************/\nbutton {\n    border: none;\n    color: white;\n    font-size: 20px;\n    margin: 4px 2px;\n    cursor: pointer;\n    padding: 15px 32px;\n    text-align: center;\n    border-radius: 12px;\n    text-decoration: none;\n    display: inline-block;\n    transition-duration: 0.4s;\n    -webkit-transition-duration: 0.4s; /* Safari */\n    background: -webkit-gradient(linear,left top, right top,from(#fd80ff), to(#00bfff));\n    background: linear-gradient(to right,#fd80ff, #00bfff);\n}\nbutton:hover {\n    background: #00bfff;\n    -webkit-box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);\n            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);\n}\n/********************************************************************************************/\n/* Upload Form CSS style                                                                    */\n/********************************************************************************************/\n.form-style-5 label {\n    display: block;\n    margin-bottom: 10px;\n    color: white;\n    font-style: italic;\n}\n.form-style-5 legend {\n    color: #1abc9c;\n    font-size: 2.0em;\n    margin-bottom: 10px;\n}\n.form-style-5 fieldset{ border: none; }\n.form-style-5 select {\n    height:50px;\n    -webkit-appearance: menulist-button; \n}\n.form-style-5 input[type=\"submit\"]:hover,\n.form-style-5 input[type=\"button\"]:hover\n{\n    background: #109177;\n}\n.form-style-5 input[type=\"submit\"],\n.form-style-5 input[type=\"button\"]\n{\n    width: 100%;\n    color: #FFF;\n    margin: 0 auto;\n    display: block;\n    font-size: 20px;\n    position: relative;\n    text-align: center;\n    font-style: normal;\n    margin-bottom: 10px;\n    background: #1abc9c;\n    border-width: 1px 1px 3px;\n     border: 1px solid #16a085;\n    padding: 19px 39px 18px 39px;  \n}\n.form-style-5 .number \n{\n    width: 50px;\n    height: 50px;\n    color: #fff;\n    font-size: 0.8em;\n    margin-right: 4px;\n    line-height: 50px;\n    text-align: center;\n    display: inline-block;\n    background: #1abc9c;\n    border-radius: 15px 15px 15px 0px;\n    text-shadow: 0 1px 0 rgba(255,255,255,0.2);\n}\n.form-style-5\n{\n    padding: 50px;\n    max-width: 100%;\n    margin: 40px auto;\n    padding: 40px 50px;\n    border-radius: 10px;\n    background: url(https://yannmjl.github.io/cloudRepo-report/assets/bg-01.jpg);\n    font-family: Georgia, \"Times New Roman\", Times, serif;\n}\n.form-style-5 select:focus,\n.form-style-5 textarea:focus,\n.form-style-5 input[type=\"url\"]:focus,\n.form-style-5 input[type=\"text\"]:focus,\n.form-style-5 input[type=\"date\"]:focus,\n.form-style-5 input[type=\"time\"]:focus,\n.form-style-5 input[type=\"file\"]:focus,\n.form-style-5 input[type=\"email\"]:focus,\n.form-style-5 input[type=\"number\"]:focus,\n.form-style-5 input[type=\"search\"]:focus,\n.form-style-5 input[type=\"datetime\"]:focus \n{\n    background: #d2d9dd;\n}\n.form-style-5 select,\n.form-style-5 textarea,\n.form-style-5 input[type=\"url\"],\n.form-style-5 input[type=\"text\"],\n.form-style-5 input[type=\"date\"],\n.form-style-5 input[type=\"time\"],\n.form-style-5 input[type=\"file\"],\n.form-style-5 input[type=\"email\"],\n.form-style-5 input[type=\"number\"],\n.form-style-5 input[type=\"search\"],\n.form-style-5 input[type=\"datetime\"] \n{\n    margin: 0;\n    outline: 0;\n    width: 100%;\n    padding: 10px;\n    border: none;\n    font-size: 20px;\n    color:#8a97a0;\n    background: white;\n    border-radius: 4px;\n    margin-bottom: 30px;\n    box-sizing: border-box;\n    -moz-box-sizing: border-box;\n    background-color: #e8eeef;\n    -webkit-box-sizing: border-box;\n    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;\n    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;\n    font-family: Georgia, \"Times New Roman\", Times, serif;\n}\n/********************************************************************************************/\n\n\n\n"
 
 /***/ }),
 
 /***/ "./src/app/file-upload/file-upload.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<body>\n\n  <popup #popup1 (confirmClick)=\"CloseEvent()\" (cancelClick)=\"GoBackEvent()\">\n    <b>No date or file was selcted! You must select date and file to upload</b> \n  </popup>\n  \n  <popup #popup2 (confirmClick)=\"ViewUploadEvent()\" (cancelClick)=\"CloseUploadEvent()\">\n    <b>File was uploaded successfully!</b>\n  </popup>\n\n  <div class=\"container\">\n        \n    <div class=\"form-style-5\">\n      <form #myform=\"ngForm\" novalidate>\n        <fieldset>\n          <legend>\n            <span class=\"number\">1</span>Select Report Date\n          </legend>\n          <label for=\"date\">'Date must be selected from the calender'</label>\n          <my-date-picker name=\"mydate\" [options]=\"myDatePickerOptions\" [(ngModel)]=\"model\" required></my-date-picker>\n        </fieldset><br><br>\n        \n        <fieldset>\n          <legend>\n            <span class=\"number\">2</span>Select File Report\n          </legend>\n          <label for=\"file\">'file report must be CSV format'</label>\n          <!-- File input for upload without using the plugin. -->\n          <input #myFileInput id=\"photo\" type=\"file\" />\n        </fieldset>\n        \n        <!-- button to trigger the file upload when submitted -->\n        <button type=\"button\" class=\"btn btn-success btn-s\" (click)=\"upload()\">Upload file Report</button>\n      </form>\n    </div>\n  \n  </div>\n\n</body>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+module.exports = "<body>\n\n  <popup #popup1 (confirmClick)=\"CloseEvent()\" (cancelClick)=\"GoBackEvent()\">\n    <b>No date or file was selcted! You must select date and file to upload</b> \n  </popup>\n  \n  <popup #popup2 (confirmClick)=\"ViewUploadEvent()\" (cancelClick)=\"CloseUploadEvent()\">\n    <b>File was uploaded successfully!</b>\n  </popup>\n\n  <div class=\"container\">\n        \n    <div class=\"form-style-5\">\n      <form #myform=\"ngForm\" novalidate>\n        <fieldset>\n          <legend>\n            <span class=\"number\">1</span>Select Report Date\n          </legend>\n          <label for=\"date\">'Date must be selected from the calender'</label>\n          <my-date-picker name=\"mydate\" [options]=\"myDatePickerOptions\" placeholder=\"Select date...\" [(ngModel)]=\"model\" required></my-date-picker>\n          <p class=\"error\" *ngIf=\"!myform.valid\">Date is required!</p>\n        </fieldset><br><br>\n        \n        <fieldset>\n          <legend>\n            <span class=\"number\">2</span>Select File Report\n          </legend>\n          <label for=\"file\">'file report must be CSV format'</label>\n          <!-- File input for upload without using the plugin. -->\n          <input #myFileInput id=\"photo\" type=\"file\" />\n        </fieldset>\n        \n        <!-- button to trigger the file upload when submitted -->\n        <button type=\"button\" class=\"btn btn-success btn-s\" (click)=\"upload()\">Upload file Report</button>\n      </form>\n    </div>\n  \n  </div>\n\n</body>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 
 /***/ }),
 
@@ -952,13 +958,16 @@ var FileUploadComponent = (function () {
             width: '250px',
             dateFormat: 'd mmm yyyy'
         };
-        this.model = { date: { year: 2018, month: 1, day: 1 } };
+        this.model = null; // not initial date set (use null or empty string)
         // set uploading endpoint
         var endpoint = __WEBPACK_IMPORTED_MODULE_6__environments_environment__["a" /* environment */].apiUrl;
         this.uploadEndpoint = endpoint + '/file';
     }
     FileUploadComponent.prototype.ngOnInit = function () {
         this.getReportByDate(this.reportDate);
+        this.myform = this.FB.group({
+            myDate: [{ jsdate: new Date() }, __WEBPACK_IMPORTED_MODULE_8__angular_forms__["j" /* Validators */].required]
+        });
     };
     FileUploadComponent.prototype.getReportByDate = function (date) {
         var _this = this;
@@ -1122,7 +1131,7 @@ var HeaderComponent = (function () {
 /***/ "./src/app/home/home.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "/********************************************************************************************/\n.container {\n    margin: 0 auto;\n    width: -webkit-fit-content;\n    width: -moz-fit-content;\n    width: fit-content;\n}\n*{ text-align: center; }\n/********************************************************************************************/\n/* css to display content in separate blocks on the page                                    */\n/********************************************************************************************/\n#left {\n  float: left;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n#first {\n    width: 0 auto;\n    float: left;\n    height: auto;\n    text-align: center;\n    padding-right: 50px;\n}\n#second {\n    width: -webkit-fit-content;\n    width: -moz-fit-content;\n    width: fit-content;\n    float: left;\n    height: auto;\n    text-align: center;\n}\n.orglist {\n    width: 0 auto;\n    text-align: center;\n}\n.error {\n        width: 0 auto;\n        padding: 4px;\n        color: #ff0000;\n    }\n/********************************************************************************************/\n/* button CSS style                                                                         */\n/********************************************************************************************/\nbutton {\n    border: none;\n    color: white;\n    font-size: 20px;\n    margin: 4px 2px;\n    cursor: pointer;\n    padding: 15px 32px;\n    text-align: center;\n    border-radius: 12px;\n    text-decoration: none;\n    display: inline-block;\n    transition-duration: 0.4s;\n    -webkit-transition-duration: 0.4s; /* Safari */\n    background: -webkit-gradient(linear,left top, right top,from(#fd80ff), to(#00bfff));\n    background: linear-gradient(to right,#fd80ff, #00bfff);\n}\nbutton:hover {\n    background: #00bfff;\n    -webkit-box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);\n            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);\n}\n/********************************************************************************************/\n/* CSS style that display the list of organization in a fashiion way                        */\n/********************************************************************************************/\n.list-org .text {\n    top: -3px;\n    position: relative;\n}\n.list-org {\n    width: 15em auto;\n    padding: 5px;\n    margin: 40px auto;\n    list-style-type: none;\n}\n.list-org li:hover {\n    left: .1em;\n    color: black;\n    background-color: #66b5ff;\n}\n.list-org li {\n    left: 0;\n    margin: .5em;\n    padding: .3em;\n    height: 1.6em;\n    cursor: pointer;\n    font-weight: normal;\n    border-radius: 4px;\n    position: relative;\n    color: wheat;\n}\n.org-list {\n  left: -1px;\n  top: -4px;\n  height: 1.8em;\n  color: white;\n  line-height: 1em;\n  font-size: small;\n  position: relative;\n  margin-right: .8em;\n  display: inline-block;\n  border-radius: 4px 0 0 4px;\n  background-color: #607D8B;\n  padding: 0.8em 0.7em 0 0.7em;\n}\n.list-org li.selected:hover {\n    color: white;\n    background-color: #BBD8DC !important;\n}\n.selected {\n    color: white;\n    background-color: #CFD8DC !important;\n}\n/********************************************************************************************/\n/* View by date Form CSS style                                                              */\n/********************************************************************************************/\n.form-style-5 label {\n    display: block;\n    margin-bottom: 10px;\n    color: white;\n    font-style: italic;\n}\n.form-style-5 legend {\n    color: #1abc9c;\n    font-size: 1.5em;\n    margin-bottom: 10px;\n}\n.form-style-5 fieldset{ border: none; }\n.form-style-5 select {\n    height:50px;\n    -webkit-appearance: menulist-button; \n}\n.form-style-5 input[type=\"submit\"]:hover,\n.form-style-5 input[type=\"button\"]:hover\n{\n    background: #109177;\n}\n.form-style-5 input[type=\"submit\"],\n.form-style-5 input[type=\"button\"]\n{\n    width: 100%;\n    color: #FFF;\n    margin: 0 auto;\n    display: block;\n    font-size: 20px;\n    position: relative;\n    text-align: center;\n    font-style: normal;\n    margin-bottom: 10px;\n    background: #1abc9c;\n    border-width: 1px 1px 3px;\n     border: 1px solid #16a085;\n    padding: 19px 39px 18px 39px;  \n}\n.form-style-5 .number \n{\n    width: 50px;\n    height: 50px;\n    color: #fff;\n    font-size: 0.8em;\n    margin-right: 4px;\n    line-height: 50px;\n    text-align: center;\n    display: inline-block;\n    background: #1abc9c;\n    border-radius: 15px 15px 15px 0px;\n    text-shadow: 0 1px 0 rgba(255,255,255,0.2);\n}\n.form-style-5\n{\n    padding: 50px;\n    max-width: 400px;\n    margin: 40px auto;\n    padding: 40px 50px;\n    border-radius: 10px;\n    background: url(https://yannmjl.github.io/cloudRepo-report/assets/bg.jpg);\n    font-family: Georgia, \"Times New Roman\", Times, serif;\n}\n.form-style-5 select:focus,\n.form-style-5 textarea:focus,\n.form-style-5 input[type=\"url\"]:focus,\n.form-style-5 input[type=\"text\"]:focus,\n.form-style-5 input[type=\"date\"]:focus,\n.form-style-5 input[type=\"time\"]:focus,\n.form-style-5 input[type=\"file\"]:focus,\n.form-style-5 input[type=\"email\"]:focus,\n.form-style-5 input[type=\"number\"]:focus,\n.form-style-5 input[type=\"search\"]:focus,\n.form-style-5 input[type=\"datetime\"]:focus \n{\n    background: #d2d9dd;\n}\n.form-style-5 select,\n.form-style-5 textarea,\n.form-style-5 input[type=\"url\"],\n.form-style-5 input[type=\"text\"],\n.form-style-5 input[type=\"date\"],\n.form-style-5 input[type=\"time\"],\n.form-style-5 input[type=\"file\"],\n.form-style-5 input[type=\"email\"],\n.form-style-5 input[type=\"number\"],\n.form-style-5 input[type=\"search\"],\n.form-style-5 input[type=\"datetime\"] \n{\n    margin: 0;\n    outline: 0;\n    width: 100%;\n    padding: 10px;\n    border: none;\n    font-size: 20px;\n    color:#8a97a0;\n    background: white;\n    border-radius: 4px;\n    margin-bottom: 30px;\n    box-sizing: border-box;\n    -moz-box-sizing: border-box;\n    background-color: #e8eeef;\n    -webkit-box-sizing: border-box;\n    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;\n    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;\n    font-family: Georgia, \"Times New Roman\", Times, serif;\n}\n/********************************************************************************************/\n/* View by name Form CSS style                                                              */\n/********************************************************************************************/\ninput[type=text] {\n    width: 130px;\n    font-size: 16px;\n    border-radius: 4px;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    border: 2px solid #ccc;\n    background-color: white;\n    background-repeat: no-repeat;\n    padding: 12px 20px 12px 40px;\n    background-position: 10px 10px; \n    transition: width 0.4s ease-in-out;\n    -webkit-transition: width 0.4s ease-in-out;\n    background-image: url(https://yannmjl.github.io/cloudRepo-report/assets/searchicon_.png);    \n}\ninput[type=text]:focus {\n    width: 100%;\n}\n.form-org\n{\n    padding: 50px;\n    max-width: 400px;\n    margin: 40px auto;\n    padding: 40px 50px;\n    border-radius: 10px;\n    background: url(https://yannmjl.github.io/cloudRepo-report/assets/bg.jpg);\n    font-family: Georgia, \"Times New Roman\", Times, serif;\n}\n.form-org legend {\n    color: #1abc9c;\n    font-size: 1.5em;\n    margin-bottom: 10px;\n}\n.form-org fieldset{ border: none; }\n.form-org .number \n{\n    width: 50px;\n    height: 50px;\n    color: #fff;\n    font-size: 0.8em;\n    margin-right: 4px;\n    line-height: 50px;\n    text-align: center;\n    display: inline-block;\n    background: #1abc9c;\n    border-radius: 15px 15px 15px 0px;\n    text-shadow: 0 1px 0 rgba(255,255,255,0.2);\n}\n/********************************************************************************************/"
+module.exports = "/********************************************************************************************/\n.container {\n    margin: 0 auto;\n    width: -webkit-fit-content;\n    width: -moz-fit-content;\n    width: fit-content;\n}\n*{ text-align: center; }\n/********************************************************************************************/\n/* css to display content in separate blocks on the page                                    */\n/********************************************************************************************/\n#left {\n  float: left;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n#first {\n    width: 0 auto;\n    float: left;\n    height: auto;\n    text-align: center;\n    padding-right: 50px;\n}\n#second {\n    width: -webkit-fit-content;\n    width: -moz-fit-content;\n    width: fit-content;\n    float: left;\n    height: auto;\n    text-align: center;\n}\n.orglist {\n    width: 0 auto;\n    text-align: center;\n}\n.error {\n        width: 0 auto;\n        padding: 4px;\n        color: #ff0000;\n}\n/********************************************************************************************/\n/* button CSS style                                                                         */\n/********************************************************************************************/\nbutton {\n    border: none;\n    color: white;\n    font-size: 20px;\n    margin: 4px 2px;\n    cursor: pointer;\n    padding: 15px 32px;\n    text-align: center;\n    border-radius: 12px;\n    text-decoration: none;\n    display: inline-block;\n    transition-duration: 0.4s;\n    -webkit-transition-duration: 0.4s; /* Safari */\n    background: -webkit-gradient(linear,left top, right top,from(#fd80ff), to(#00bfff));\n    background: linear-gradient(to right,#fd80ff, #00bfff);\n}\nbutton:hover {\n    background: #00bfff;\n    -webkit-box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);\n            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);\n}\n/********************************************************************************************/\n/* CSS style that display the list of organization in a fashiion way                        */\n/********************************************************************************************/\n.list-org .text {\n    top: -3px;\n    position: relative;\n}\n.list-org {\n    width: 15em auto;\n    padding: 5px;\n    margin: 40px auto;\n    list-style-type: none;\n}\n.list-org li:hover {\n    left: .1em;\n    color: black;\n    background-color: #66b5ff;\n}\n.list-org li {\n    left: 0;\n    margin: .5em;\n    padding: .3em;\n    height: 1.6em;\n    cursor: pointer;\n    font-weight: normal;\n    border-radius: 4px;\n    position: relative;\n    color: wheat;\n}\n.org-list {\n  left: -1px;\n  top: -4px;\n  height: 1.8em;\n  color: white;\n  line-height: 1em;\n  font-size: small;\n  position: relative;\n  margin-right: .8em;\n  display: inline-block;\n  border-radius: 4px 0 0 4px;\n  background-color: #607D8B;\n  padding: 0.8em 0.7em 0 0.7em;\n}\n.list-org li.selected:hover {\n    color: white;\n    background-color: #BBD8DC !important;\n}\n.selected {\n    color: white;\n    background-color: #CFD8DC !important;\n}\n/********************************************************************************************/\n/* View by date Form CSS style                                                              */\n/********************************************************************************************/\n.form-style-5 label {\n    display: block;\n    margin-bottom: 10px;\n    color: white;\n    font-style: italic;\n}\n.form-style-5 legend {\n    color: #1abc9c;\n    font-size: 1.5em;\n    margin-bottom: 10px;\n}\n.form-style-5 fieldset{ border: none; }\n.form-style-5 select {\n    height:50px;\n    -webkit-appearance: menulist-button; \n}\n.form-style-5 input[type=\"submit\"]:hover,\n.form-style-5 input[type=\"button\"]:hover\n{\n    background: #109177;\n}\n.form-style-5 input[type=\"submit\"],\n.form-style-5 input[type=\"button\"]\n{\n    width: 100%;\n    color: #FFF;\n    margin: 0 auto;\n    display: block;\n    font-size: 20px;\n    position: relative;\n    text-align: center;\n    font-style: normal;\n    margin-bottom: 10px;\n    background: #1abc9c;\n    border-width: 1px 1px 3px;\n     border: 1px solid #16a085;\n    padding: 19px 39px 18px 39px;  \n}\n.form-style-5 .number \n{\n    width: 50px;\n    height: 50px;\n    color: #fff;\n    font-size: 0.8em;\n    margin-right: 4px;\n    line-height: 50px;\n    text-align: center;\n    display: inline-block;\n    background: #1abc9c;\n    border-radius: 15px 15px 15px 0px;\n    text-shadow: 0 1px 0 rgba(255,255,255,0.2);\n}\n.form-style-5\n{\n    padding: 50px;\n    max-width: 400px;\n    margin: 40px auto;\n    padding: 40px 50px;\n    border-radius: 10px;\n    background: url(https://yannmjl.github.io/cloudRepo-report/assets/bg.jpg);\n    font-family: Georgia, \"Times New Roman\", Times, serif;\n}\n.form-style-5 select:focus,\n.form-style-5 textarea:focus,\n.form-style-5 input[type=\"url\"]:focus,\n.form-style-5 input[type=\"text\"]:focus,\n.form-style-5 input[type=\"date\"]:focus,\n.form-style-5 input[type=\"time\"]:focus,\n.form-style-5 input[type=\"file\"]:focus,\n.form-style-5 input[type=\"email\"]:focus,\n.form-style-5 input[type=\"number\"]:focus,\n.form-style-5 input[type=\"search\"]:focus,\n.form-style-5 input[type=\"datetime\"]:focus \n{\n    background: #d2d9dd;\n}\n.form-style-5 select,\n.form-style-5 textarea,\n.form-style-5 input[type=\"url\"],\n.form-style-5 input[type=\"text\"],\n.form-style-5 input[type=\"date\"],\n.form-style-5 input[type=\"time\"],\n.form-style-5 input[type=\"file\"],\n.form-style-5 input[type=\"email\"],\n.form-style-5 input[type=\"number\"],\n.form-style-5 input[type=\"search\"],\n.form-style-5 input[type=\"datetime\"] \n{\n    margin: 0;\n    outline: 0;\n    width: 100%;\n    padding: 10px;\n    border: none;\n    font-size: 20px;\n    color:#8a97a0;\n    background: white;\n    border-radius: 4px;\n    margin-bottom: 30px;\n    box-sizing: border-box;\n    -moz-box-sizing: border-box;\n    background-color: #e8eeef;\n    -webkit-box-sizing: border-box;\n    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;\n    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;\n    font-family: Georgia, \"Times New Roman\", Times, serif;\n}\n/********************************************************************************************/\n/* View by name Form CSS style                                                              */\n/********************************************************************************************/\ninput[type=text] {\n    width: 130px;\n    font-size: 16px;\n    border-radius: 4px;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    border: 2px solid #ccc;\n    background-color: white;\n    background-repeat: no-repeat;\n    padding: 12px 20px 12px 40px;\n    background-position: 10px 10px; \n    transition: width 0.4s ease-in-out;\n    -webkit-transition: width 0.4s ease-in-out;\n    background-image: url(https://yannmjl.github.io/cloudRepo-report/assets/searchicon_.png);    \n}\ninput[type=text]:focus {\n    width: 100%;\n}\n.form-org\n{\n    padding: 50px;\n    max-width: 400px;\n    margin: 40px auto;\n    padding: 40px 50px;\n    border-radius: 10px;\n    background: url(https://yannmjl.github.io/cloudRepo-report/assets/bg.jpg);\n    font-family: Georgia, \"Times New Roman\", Times, serif;\n}\n.form-org legend {\n    color: #1abc9c;\n    font-size: 1.5em;\n    margin-bottom: 10px;\n}\n.form-org fieldset{ border: none; }\n.form-org .number \n{\n    width: 50px;\n    height: 50px;\n    color: #fff;\n    font-size: 0.8em;\n    margin-right: 4px;\n    line-height: 50px;\n    text-align: center;\n    display: inline-block;\n    background: #1abc9c;\n    border-radius: 15px 15px 15px 0px;\n    text-shadow: 0 1px 0 rgba(255,255,255,0.2);\n}\n/********************************************************************************************/"
 
 /***/ }),
 
@@ -1254,9 +1263,20 @@ var HomeComponent = (function () {
                 sunHighlight: false,
                 selectorWidth: '400px',
                 selectorHeight: '300px',
-                markDates: _this.myDates,
+                // markDates: this.myDates,
                 dateFormat: 'd mmm yyyy',
                 selectionTxtFontSize: '14px',
+                highlightDates: _this.report.map(function (item) {
+                    _this.date = new Date(item.date);
+                    _this.day = _this.date.getDate();
+                    _this.month = _this.date.getMonth() + 1;
+                    _this.year = _this.date.getUTCFullYear();
+                    console.log('the date is: ' + _this.date);
+                    console.log('day in date ' + _this.day);
+                    console.log('Month in date ' + _this.month);
+                    console.log('year in date ' + _this.year);
+                    return { year: _this.year, month: _this.month, day: _this.day };
+                }),
             };
         });
     };
@@ -1332,8 +1352,11 @@ module.exports = "<body>\n  \n  <div class=\"container-login100\">\n\n    <h1>{{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ng2_opd_popup__ = __webpack_require__("./node_modules/ng2-opd-popup/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__auth_auth_service__ = __webpack_require__("./src/app/auth/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_report_service__ = __webpack_require__("./src/app/shared/report.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_take__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/take.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1348,19 +1371,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
 var LoginComponent = (function () {
-    function LoginComponent(popup, fb, http, authService) {
+    function LoginComponent(popup, fb, http, authService, repoService) {
         this.popup = popup;
         this.fb = fb;
         this.http = http;
         this.authService = authService;
+        this.repoService = repoService;
         this.title = 'CloudRepo Clients Report';
     }
     LoginComponent.prototype.ngOnInit = function () {
         this.myForm = this.fb.group({
-            userName: ['', __WEBPACK_IMPORTED_MODULE_4__angular_forms__["j" /* Validators */].required],
-            password: ['', __WEBPACK_IMPORTED_MODULE_4__angular_forms__["j" /* Validators */].required]
+            userName: ['', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["j" /* Validators */].required],
+            password: ['', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["j" /* Validators */].required]
         });
+        this.repoService.welcomePage();
     };
     LoginComponent.prototype.isFieldInvalid = function (field) {
         return ((!this.myForm.get(field).valid && this.myForm.get(field).touched) ||
@@ -1380,43 +1408,52 @@ var LoginComponent = (function () {
             // confirmBtnClass: 'btn btn-default', // your class for styling the confirm button
             animation: 'bounceInDown' // 'fadeInLeft', 'fadeInRight', 'fadeInUp', 'fadeInDown', 'bounceIn'
         };
-        if (this.authService.isLoginPostLoadign) {
-            if (this.authService.isLoggedIn$$) {
-                this.popupLogin.show(this.popupLogin.options);
-            }
-            else {
-                this.popupLogin.hide();
-            }
+        if (this.authService.isLoggedIn) {
+            this.myForm = this.fb.group({
+                userName: ['', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["j" /* Validators */].required],
+                password: ['', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["j" /* Validators */].required]
+            });
         }
+        /*
+        this.authService.isLoggedIn
+          .take(1)
+          .map((isLoggedIn: boolean) => {
+            if (!isLoggedIn) {
+              this.popupLogin.show(this.popupLogin.options);
+            }
+            this.popupLogin.hide();
+          });
+      */
     };
     LoginComponent.prototype.onSubmit = function () {
         if (this.myForm.valid) {
             this.authService.getLoginPostData(this.myForm.value);
-            this.isAuthenticated();
         }
         this.formSubmitAttempt = true;
+        this.isAuthenticated();
     };
     LoginComponent.prototype.logInEvent = function () {
         this.popupLogin.hide();
         this.myForm = this.fb.group({
-            userName: ['', __WEBPACK_IMPORTED_MODULE_4__angular_forms__["j" /* Validators */].required],
-            password: ['', __WEBPACK_IMPORTED_MODULE_4__angular_forms__["j" /* Validators */].required]
+            userName: ['', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["j" /* Validators */].required],
+            password: ['', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["j" /* Validators */].required]
         });
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["ViewChild"])('popupLogIn'),
+        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["ViewChild"])('popupLogIn'),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0_ng2_opd_popup__["a" /* Popup */])
     ], LoginComponent.prototype, "popupLogin", void 0);
     LoginComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
             selector: 'app-login',
             template: __webpack_require__("./src/app/login/login.component.html"),
             styles: [__webpack_require__("./src/app/login/login.component.css")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ng2_opd_popup__["a" /* Popup */],
-            __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormBuilder */],
+            __WEBPACK_IMPORTED_MODULE_5__angular_forms__["b" /* FormBuilder */],
             __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */],
-            __WEBPACK_IMPORTED_MODULE_2__auth_auth_service__["a" /* AuthService */]])
+            __WEBPACK_IMPORTED_MODULE_2__auth_auth_service__["a" /* AuthService */],
+            __WEBPACK_IMPORTED_MODULE_3__shared_report_service__["a" /* ReportService */]])
     ], LoginComponent);
     return LoginComponent;
 }());
@@ -1833,6 +1870,7 @@ var ReportService = (function () {
         this.headers = new __WEBPACK_IMPORTED_MODULE_6__angular_common_http__["d" /* HttpHeaders */]({ 'Authorization': this.token$ });
         this.options = { headers: this.headers };
         var endpoint = __WEBPACK_IMPORTED_MODULE_4__environments_environment__["a" /* environment */].apiUrl;
+        this.welcomeEndpoint = endpoint;
         this.getReportEndpoint = endpoint + '/report';
         this.getReportByDateEndpoint = endpoint + '/date';
         this.getDateInReportEndpoint = endpoint + '/date';
@@ -1843,6 +1881,10 @@ var ReportService = (function () {
         this.deleteReportByDateEndpoint = endpoint + '/delete-date';
         this.deleteAllReportEndpoint = endpoint + '/delete-all-record';
     }
+    ReportService.prototype.welcomePage = function () {
+        return this.http.get(this.welcomeEndpoint)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["a" /* catchError */])(this.handleError));
+    };
     ReportService.prototype.getReports = function () {
         return this.http.get(this.getReportEndpoint)
             .pipe(Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["a" /* catchError */])(this.handleError));
