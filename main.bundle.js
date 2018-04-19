@@ -1,5 +1,22 @@
 webpackJsonp(["main"],{
 
+/***/ "./node_modules/ng2-opd-popup/node_modules/@angular/core/src/linker lazy recursive":
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = "./node_modules/ng2-opd-popup/node_modules/@angular/core/src/linker lazy recursive";
+
+/***/ }),
+
 /***/ "./src/$$_lazy_route_resource lazy recursive":
 /***/ (function(module, exports) {
 
@@ -1067,14 +1084,14 @@ var FileUploadComponent = (function () {
 /***/ "./src/app/header/header.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "/********************************************************************************************/\n/* header CSS                                                                               */\n/********************************************************************************************/\n.angular-logo {\n    margin: 0 4px 3px 0;\n    height: 35px;\n    vertical-align: middle;\n}\n.fill-remaining-space {\n    -webkit-box-flex: 1;\n        -ms-flex: 1 1 auto;\n            flex: 1 1 auto;\n}\n/********************************************************************************************/"
+module.exports = "/********************************************************************************************/\n/* header CSS                                                                               */\n/********************************************************************************************/\n.angular-logo {\n    margin: 0 4px 3px 0;\n    height: 55px;\n    vertical-align: middle;\n}\n.fill-remaining-space {\n    -webkit-box-flex: 1;\n        -ms-flex: 1 1 auto;\n            flex: 1 1 auto;\n}\n/********************************************************************************************/"
 
 /***/ }),
 
 /***/ "./src/app/header/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<body>\n\n  <div *ngIf=\"isLoggedIn$ | async as isLoggedIn\">\n  \n    <mat-toolbar color=\"primary\">\n      <span>\n        <h1>{{ title }}</h1>\n      </span>\n      <span class=\"fill-remaining-space\"></span>\n      <!-- Home button on the header -->\n      <button mat-button routerLink=\"/home\">\n        <b>Home</b>\n      </button>\n      <!-- View button on the header -->\n      <button mat-button routerLink=\"/report\">\n        <b>View Report</b>\n      </button>\n      <!-- Upload button on the header -->\n      <button mat-button routerLink=\"/upload-file\">\n        <b>Upload Report</b>\n      </button>\n      <!-- Log Out button on the header -->\n      <button mat-button color=\"accent\" (click)=\"onLogout()\" *ngIf=\"isLoggedIn\">\n        <b>Log Out</b>\n      </button>\n\n    </mat-toolbar>\n  \n  </div>\n  \n</body>\n\n  \n\n\n\n"
+module.exports = "<body>\n\n  <div *ngIf=\"isLoggedIn$ | async as isLoggedIn\">\n  \n    <mat-toolbar color=\"primary\">\n      <span>\n        <img src=\"assets/cloudRepoLogo.png\" class=\"angular-logo\">\n        {{ title }}\n      </span>\n      <span class=\"fill-remaining-space\"></span>\n      <!-- Home button on the header -->\n      <button mat-button routerLink=\"/home\">\n        <b>Home</b>\n      </button>\n      <!-- View button on the header -->\n      <button mat-button routerLink=\"/report\">\n        <b>View Report</b>\n      </button>\n      <!-- Upload button on the header -->\n      <button mat-button routerLink=\"/upload-file\">\n        <b>Upload Report</b>\n      </button>\n      <!-- Log Out button on the header -->\n      <button mat-button color=\"accent\" (click)=\"onLogout()\" *ngIf=\"isLoggedIn\">\n        <b>Log Out</b>\n      </button>\n\n    </mat-toolbar>\n  \n  </div>\n  \n</body>\n\n  \n\n\n\n"
 
 /***/ }),
 
@@ -1207,7 +1224,7 @@ var HomeComponent = (function () {
         }
         this.order = value;
         console.log('in setOrder, reverse value: ' + this.reverse);
-        console.log('in setOrder, order by: ' + this.order);
+        console.log('in setOrder, order by : ' + this.order);
     };
     HomeComponent.prototype.getListOfOrganization = function () {
         var _this = this;
