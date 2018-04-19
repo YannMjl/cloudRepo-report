@@ -1,22 +1,5 @@
 webpackJsonp(["main"],{
 
-/***/ "./node_modules/ng2-opd-popup/node_modules/@angular/core/src/linker lazy recursive":
-/***/ (function(module, exports) {
-
-function webpackEmptyAsyncContext(req) {
-	// Here Promise.resolve().then() is used instead of new Promise() to prevent
-	// uncatched exception popping up in devtools
-	return Promise.resolve().then(function() {
-		throw new Error("Cannot find module '" + req + "'.");
-	});
-}
-webpackEmptyAsyncContext.keys = function() { return []; };
-webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
-module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = "./node_modules/ng2-opd-popup/node_modules/@angular/core/src/linker lazy recursive";
-
-/***/ }),
-
 /***/ "./src/$$_lazy_route_resource lazy recursive":
 /***/ (function(module, exports) {
 
